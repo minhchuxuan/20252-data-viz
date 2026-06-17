@@ -120,20 +120,18 @@
   \textbf{Problem.} A flat medal table hides geography, specialization,
   demographics, and the spatial footprint of the Games.\\[4pt]
   \textbf{Goal.} A guided, interactive story that pairs \teallead{explanatory}
-  narrative with \teallead{exploratory} filtering --- five linked sections,
+  narrative with \teallead{exploratory} filtering --- four linked sections,
   broad to narrow:
   \vspace{6pt}
   \begin{columns}[T]
-    \column{0.19\textwidth}\centering
-      {\color{gold}\textbf{1}}\\ \footnotesize Opening Lens\\ \scriptsize\color{slate} global scale \& geography
-    \column{0.19\textwidth}\centering
+    \column{0.24\textwidth}\centering
+      {\color{gold}\textbf{1}}\\ \footnotesize Opening Lens\\ \scriptsize\color{slate} global scale, geography \& venues
+    \column{0.24\textwidth}\centering
       {\color{gold}\textbf{2}}\\ \footnotesize Medal Race\\ \scriptsize\color{slate} led \& moved vs Tokyo
-    \column{0.19\textwidth}\centering
+    \column{0.24\textwidth}\centering
       {\color{gold}\textbf{3}}\\ \footnotesize Specialization\\ \scriptsize\color{slate} NOC $\times$ discipline
-    \column{0.19\textwidth}\centering
-      {\color{gold}\textbf{4}}\\ \footnotesize Athlete Lens\\ \scriptsize\color{slate} age, gender, load
-    \column{0.19\textwidth}\centering
-      {\color{gold}\textbf{5}}\\ \footnotesize Paris Geography\\ \scriptsize\color{slate} venues \& records
+    \column{0.24\textwidth}\centering
+      {\color{gold}\textbf{4}}\\ \footnotesize Athlete Lens\\ \scriptsize\color{slate} age, gender, load, records
   \end{columns}
   \vspace{8pt}
   \begin{block}{Headline}
@@ -155,7 +153,7 @@
     Stacked / diverging bars& Length for amounts; diverging bar for change \\
     Bubble scatter          & Relationship; position + area + hue; overlap control \\
     Country$\times$discipline heatmap & Pre-attentive detection + exact cell values \\
-    Medal-flow Sankey       & Multipartite graph; edge width = flow \\
+    Medal-flow Sankey       & Bipartite graph (NOC$\rightarrow$discipline); ribbon width = flow \\
     Treemap                 & Hierarchy with proportional ink \\
     Histogram / box plots   & Distributions and spread \\
     Venue symbol map        & Point map; size + colour on coordinates \\
@@ -197,9 +195,9 @@
     \column{0.64\textwidth}\centering
       \includegraphics[width=\linewidth]{figures/medal_flow_sankey.pdf}
     \column{0.34\textwidth}\small
-      NOC~$\rightarrow$~discipline~$\rightarrow$~medal colour as three node layers;
-      \teallead{ribbon width = record volume}. Honest about being a categorical
-      flow, not a social network.\\[6pt]
+      A \teallead{bipartite} flow, NOC~$\rightarrow$~discipline, with
+      \teallead{ribbon width = record volume}. The widest ribbons mark the
+      strongest nation--sport pairings.\\[6pt]
       \techtag{Graph visualization (Sankey mechanism).}
   \end{columns}
 \end{frame}
@@ -247,14 +245,14 @@
 \end{frame}
 
 % --------------------------- VIZ 6: VENUE MAP -----------------------
-\begin{frame}{Paris Geography --- the spatial footprint}
+\begin{frame}{Opening Lens --- the spatial footprint}
   \begin{columns}[c]
     \column{0.62\textwidth}\centering
       \includegraphics[width=\linewidth]{figures/venue_geography.pdf}
     \column{0.36\textwidth}\small
-      A \teallead{symbol map}: bubble size = athlete volume, colour = medal
-      activity. The dense Paris cluster contrasts with sailing/surf venues far
-      to the south.\\[6pt]
+      A \teallead{symbol map} closing the Opening Lens: bubble size = athlete
+      volume, colour = medal activity. The dense Paris cluster contrasts with
+      sailing/surf venues far to the south.\\[6pt]
       \techtag{Point map on lat/long coordinates.}
   \end{columns}
 \end{frame}
@@ -320,7 +318,7 @@
     \column{0.45\textwidth}
       \teallead{Checked}
       \begin{itemize}
-        \item All five sections and every control exercised, including empty and narrow selections
+        \item All four sections and every control exercised, including empty and narrow selections
         \item Empty selections degrade gracefully to a styled ``no data'' state
         \item Row counts, data types, and missing-data rates reconcile with the source
       \end{itemize}

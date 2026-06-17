@@ -44,9 +44,10 @@ STATUS_COLORS = {
     "No medal": "#AEB7C2",
 }
 
-# Most-distinct CVD-safe pair (orange vs blue).
+# Okabe--Ito yellow vs blue (both CVD-safe). Chosen so their overlap in the age
+# histogram (yellow drawn over blue) blends to a readable green, not a muddy grey.
 GENDER_COLORS = {
-    "Female": "#E69F00",
+    "Female": "#F0E442",
     "Male": "#0072B2",
 }
 
@@ -90,16 +91,18 @@ def style_plotly_chart(fig, height: int | None = None):
             font=dict(family="Inter, 'Segoe UI', Arial, sans-serif", size=16, color=INK),
             x=0.01,
             xanchor="left",
-            y=0.97,
+            y=0.99,
             yanchor="top",
         ),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        margin=dict(l=46, r=28, t=58, b=44),
+        # Roomier top margin so the legend sits on its own line *below* the title
+        # rather than colliding with a long left-aligned title in narrow columns.
+        margin=dict(l=46, r=28, t=84, b=44),
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=1.02,
+            y=1.0,
             xanchor="right",
             x=1,
             bgcolor="rgba(255,255,255,0.0)",

@@ -87,7 +87,6 @@ def _build_figures():
         ("age_by_discipline", viz.create_age_boxplot_by_discipline(athletes, top_n=TOP_N), 640),
         ("competition_load", viz.create_competition_load_scatter(athletes), 560),
         ("venue_geography", viz.create_venue_map(venues), 600),
-        ("competition_timeline", viz.create_competition_timeline(athletes), 540),
         ("records_by_discipline", viz.create_record_bar(athletes, top_n=TOP_N), 540),
     ]
     return specs

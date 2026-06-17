@@ -5,7 +5,7 @@ is no sidebar. Navigation is inline tabs and every control lives in the page,
 next to the chart it drives -- you interact with the data directly.
 
 Design (informed by *The Big Book of Dashboards*, Wexler/Shaffer/Cotgreave):
-  * Lead each view with animated BANs ("Big Ass Numbers"), not data tables.
+  * Lead each view with animated headline KPI cards, not data tables.
   * Detail is on demand in tooltips; the page shows the data, never dumps it.
   * Colour is colourblind-safe (Okabe--Ito) and carries meaning only.
   * Dense, multi-column chart grids; every title states a takeaway.
@@ -15,6 +15,7 @@ The data/chart layers (``src/``) are unchanged; this is the presentation layer.
 from __future__ import annotations
 
 import itertools
+from pathlib import Path
 
 import streamlit.components.v1 as components
 import pandas as pd
@@ -38,6 +39,12 @@ from src.utils import (
     parse_country_codes,
 )
 from src import visualizations as viz
+
+# Olympic rings logo (local SVG asset) inlined into the hero banner.
+try:
+    _RINGS_SVG = (Path(__file__).parent / "assets" / "olympic_rings.svg").read_text(encoding="utf-8")
+except OSError:
+    _RINGS_SVG = ""
 
 st.set_page_config(
     page_title="Paris 2024 Olympic Data Story",
@@ -63,16 +70,18 @@ def inject_css() -> None:
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 html, body, [class*="css"], .stApp { font-family: 'Inter','Segoe UI',Arial,sans-serif; }
-#MainMenu, footer, [data-testid="stToolbar"], [data-testid="collapsedControl"] { visibility: hidden; }
+#MainMenu, footer, [data-testid="stToolbar"], [data-testid="collapsedControl"], [data-testid="stHeader"] { visibility: hidden; }
 .stApp { background:
     radial-gradient(1200px 480px at 80% -8%, #EAF1F8 0%, rgba(234,241,248,0) 60%), #F4F6FA; }
-.block-container { padding-top: 1.1rem; padding-bottom: 3rem; max-width: 1360px; }
+.block-container { padding-top: 2.0rem; padding-bottom: 3rem; max-width: 1360px; }
 
 /* ---- Hero ---- */
 .hero { display:flex; align-items:center; gap:18px; padding: 16px 22px;
     background: linear-gradient(110deg,#10243B 0%,#163A5F 55%,#0E6E86 100%);
     border-radius: 16px; color:#fff; box-shadow: 0 12px 30px rgba(16,36,59,.22); margin-bottom: 10px; }
-.hero-badge { font-size: 2.5rem; line-height:1; }
+.hero-logo { background:#fff; border-radius:14px; padding:9px 13px; display:flex; align-items:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.20); flex:0 0 auto; }
+.hero-logo svg { display:block; width:86px; height:auto; }
 .hero-kicker { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#9FD3E6; font-weight:600; }
 .hero-title { font-size:1.6rem; font-weight:800; margin:1px 0 0; line-height:1.1; letter-spacing:-.01em; }
 .hero-sub { margin:4px 0 0; color:#CFE0EC; font-size:.9rem; max-width: 80ch; }
@@ -130,14 +139,14 @@ html, body, [class*="css"], .stApp { font-family: 'Inter','Segoe UI',Arial,sans-
 
 def hero() -> None:
     st.markdown(
-        """
+        f"""
 <div class="hero">
-  <div class="hero-badge">\U0001F3C5</div>
+  <div class="hero-logo">{_RINGS_SVG}</div>
   <div>
     <div class="hero-kicker">Paris 2024 &middot; Olympic Data Story</div>
     <div class="hero-title">Beyond the medal table</div>
-    <p class="hero-sub">Five chapters — participation, the medal race, sport specialization,
-    the athletes behind the numbers, and the geography of the Games. Switch chapters with the
+    <p class="hero-sub">Four chapters — the global field and where it played out, the medal
+    race, sport specialization, and the athletes behind the numbers. Switch chapters with the
     tabs; every control sits next to the chart it drives.</p>
   </div>
 </div>
@@ -235,11 +244,10 @@ def podium(table: pd.DataFrame) -> None:
     order = [(rows[1], 184, "#9AA6B2", "2"), (rows[0], 212, "#E3A81B", "1"), (rows[2], 166, "#B5713B", "3")]
     blocks = ""
     for r, h, color, rank in order:
-        tile = "\U0001F947" if rank == "1" else ("\U0001F948" if rank == "2" else "\U0001F949")
         blocks += (
             f'<div class="pod" style="height:{h}px;background:linear-gradient(180deg,{color}2E,{color}14);'
             f'border-top:4px solid {color}">'
-            f'<div class="rank">{tile} #{rank}</div><div class="code">{r.code}</div>'
+            f'<div class="rank">#{rank}</div><div class="code">{r.code}</div>'
             f'<div class="country">{r.country}</div><div class="tot">{int(r.total)}</div>'
             f'<div class="brk">{int(r.gold)}G &middot; {int(r.silver)}S &middot; {int(r.bronze)}B</div></div>'
         )
@@ -276,9 +284,8 @@ female_share = (athletes["gender"] == "Female").mean()
 records_total = int(enriched["record_flag"].sum())
 
 hero()
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "\U0001F30D  Opening Lens", "\U0001F3C5  Medal Race", "\U0001F3AF  Specialization",
-    "\U0001F3C3  Athlete Lens", "\U0001F5FA️  Geography",
+tab1, tab2, tab3, tab4 = st.tabs([
+    "Opening Lens", "Medal Race", "Specialization", "Athlete Lens",
 ])
 
 
@@ -314,18 +321,24 @@ with tab1:
          "sub": "Olympic / world"},
     ])
 
-    note("<b>Reading the map.</b> Colour intensity encodes total medals per NOC. The United "
-         "States and China separate from the field before you read a single label.")
     chart(viz.create_world_medal_map(cview))
+    note("<b>Reading the map.</b> Colour intensity encodes total medals per NOC; the United "
+         "States and China separate from the field before you read a single label.")
 
     c1, c2 = st.columns(2, gap="medium")
     with c1:
         chart(viz.create_stacked_medal_bar(cview, top_n=top_n1, sort_by="total"))
-        note("Bar <b>length</b> encodes amount; medal <b>hue</b> is consistent across pages.")
+        note("Bar <b>length</b> encodes medal count; medal <b>hue</b> stays consistent across "
+             "every page.")
     with c2:
         chart(viz.create_athletes_vs_medals(cview))
         note("<b>Position</b> relates delegation size to medals; bubble <b>area</b> adds "
-             "disciplines entered. A big team helps but does not guarantee medals.")
+             "disciplines entered — a big team helps but does not guarantee medals.")
+
+    chart(viz.create_venue_map(summarize_venues(enriched)))
+    note("<b>Where it physically happened.</b> Each venue sits at its latitude/longitude; "
+         "bubble <b>size</b> is athlete volume and <b>colour</b> medal activity — a dense Paris "
+         "core reaching out to sailing in Marseille and surfing overseas.")
 
 
 # ===========================================================================
@@ -374,8 +387,12 @@ with tab2:
     c1, c2 = st.columns(2, gap="medium")
     with c1:
         chart(viz.create_stacked_medal_bar(cview, top_n=top_n2, sort_by=sort_by))
+        note("Medal <b>composition</b> by NOC: bar length is the total, segments split "
+             "gold/silver/bronze. Re-rank with the control above.")
     with c2:
         chart(viz.create_paris_tokyo_delta(cview, top_n=min(10, top_n2)))
+        note("<b>Change vs Tokyo 2020.</b> A diverging bar around zero — gains to the right, "
+             "losses to the left; direction is labelled so colour is never the only cue.")
 
     chart(viz.create_efficiency_bar(cview, top_n=min(12, top_n2)))
     note("<b>Efficiency, not just size.</b> Medals per 100 athletes rewards small, sharp "
@@ -406,7 +423,7 @@ with tab2:
         chart(viz.create_medal_race_animation(enriched))
         note("<b>Press play.</b> Each discipline's bar grows with its cumulative medals as "
              "the Games progress — animation is used here because the variable is genuinely "
-             "time-ordered (course Chapter 8.4).")
+             "time-ordered.")
 
 
 # ===========================================================================
@@ -440,21 +457,24 @@ with tab3:
              "sub": f"{pv} records"},
         ], height=120)
 
-    note("<b>One unit throughout this chapter — the athlete–medal record.</b> Each medalling "
-         "athlete counts once, so a single team gold adds several records. These counts therefore "
-         "run higher than the official country medal table in the Medal Race chapter.")
-    note("<b>How to read the heatmap.</b> Dark cells pop pre-attentively; the printed number "
-         "gives the exact count where colour alone is imprecise.")
     c1, c2 = st.columns(2, gap="medium")
     with c1:
         chart(viz.create_discipline_medal_bar(mview, top_n=top_n3))
+        note("<b>Medal records per discipline.</b> Bar length ranks the busiest sports. Unit: the "
+             "athlete–medal record — each medalling athlete counts once, so a team gold adds "
+             "several records (these run higher than the official country table).")
     with c2:
         chart(viz.create_country_discipline_heatmap(mview, top_countries=min(14, top_n3), top_disciplines=min(16, top_n3)))
+        note("<b>How to read the heatmap.</b> Dark cells pop pre-attentively; the printed number "
+             "gives the exact count where colour alone is imprecise.")
 
     chart(viz.create_medal_flow_sankey(mview, top_countries=min(8, top_n3), top_disciplines=min(9, top_n3)))
-    note("The Sankey is a <b>derived flow graph</b>: NOC → discipline → medal colour, ribbon "
-         "width set by record volume — not an athlete-to-athlete network.")
+    note("<b>Who owns which sport.</b> A bipartite flow, NOC → discipline, ribbon width set by "
+         "record volume; the widest ribbons are the strongest nation–sport pairings. (The "
+         "medal-colour layer is deliberately left out — it carries no real information.)")
     chart(viz.create_medal_treemap(mview, top_disciplines=min(14, top_n3)))
+    note("<b>Nested share.</b> Tile <b>area</b> is proportional to records, nested discipline → "
+         "country; labels give exact counts to offset the lower accuracy of area judgements.")
 
 
 # ===========================================================================
@@ -492,58 +512,27 @@ with tab4:
     c1, c2 = st.columns(2, gap="medium")
     with c1:
         chart(viz.create_age_histogram(aview))
+        note(f"<b>Age distribution by gender.</b> These views use the {format_number(len(enriched))} "
+             f"athletes with enriched profiles ({format_percent(len(enriched) / len(athletes))} of "
+             "the roster), so the count sits just below the Opening Lens headline.")
     with c2:
         chart(viz.create_gender_balance_by_discipline(aview, top_n=top_n4))
-    note("Age <b>distributions</b> and gender <b>proportions</b>: medians run from the early-20s "
-         "in skateboarding and gymnastics to the late-30s in equestrian.")
+        note("<b>Gender balance by discipline.</b> A 100% stacked bar reads <b>share</b>, not raw "
+             "counts — many sports sit near parity, a few remain skewed.")
 
     c3, c4 = st.columns(2, gap="medium")
     with c3:
         chart(viz.create_age_boxplot_by_discipline(aview, top_n=top_n4))
+        note("<b>Age spread by sport.</b> Medians run from the early-20s (skateboarding, "
+             "gymnastics) to the late-30s (equestrian); whiskers show range, not sampling error.")
     with c4:
         chart(viz.create_competition_load_scatter(aview))
-    note("Workload as a <b>relationship</b>: events entered vs active days, bubble <b>area</b> for "
-         "medals, <b>colour</b> for medal status. Detail is on hover, never in a table.")
+        note("<b>Workload relationship.</b> Events entered vs active days; bubble <b>area</b> is "
+             "medals, <b>colour</b> is medal status. Detail on hover, never in a table.")
 
-
-# ===========================================================================
-#  TAB 5 -- Paris Geography
-# ===========================================================================
-with tab5:
-    section_header(
-        "Chapter 5 — the Games on the map",
-        "Where did Paris 2024 actually happen?",
-        "The Games were a spatial event: a dense Paris core reaching out to sailing and "
-        "surfing far from the capital.")
-
-    with control_bar():
-        cc1, cc2 = st.columns([1, 1.3])
-        top_n5 = cc1.slider("Ranked items", 5, 30, 15, key="t5_topn")
-        gender5 = cc2.segmented_control("Gender", ["All", "Female", "Male"], default="All", key="t5_gender") or "All"
-    aview = apply_athlete_filters(enriched, gender=gender5)
-    venues = summarize_venues(aview)
-
-    if not venues.empty:
-        busiest = venues.sort_values("athletes", ascending=False).iloc[0]
-        animated_kpis([
-            {"label": "Mapped venues", "value": len(venues), "accent": OKABE["green"], "sub": "with coordinates"},
-            {"label": "Busiest venue", "text": busiest["venue"][:18], "accent": OKABE["blue"],
-             "sub": f"{format_number(busiest['athletes'])} athletes"},
-            {"label": "Athletes located", "value": int(venues["athletes"].sum()), "accent": OKABE["orange"],
-             "sub": "excludes multisite"},
-            {"label": "Records in view", "value": int(venues["records"].sum()), "accent": OKABE["vermillion"]},
-        ], height=120)
-
-    note("<b>Two map types, one story.</b> The bubble map places venues by latitude/longitude; "
-         "size encodes athlete volume and colour encodes medal activity.")
-    chart(viz.create_venue_map(venues))
-
-    c1, c2 = st.columns(2, gap="medium")
-    with c1:
-        chart(viz.create_competition_timeline(aview))
-    with c2:
-        chart(viz.create_top_venues_bar(venues, top_n=top_n5))
-    chart(viz.create_record_bar(aview, top_n=top_n5))
+    chart(viz.create_record_bar(aview, top_n=top_n4))
+    note("<b>Where records fell.</b> Olympic and world records by discipline — swimming and "
+         "athletics lead the record book; the ranking responds to the filters above.")
 
 
 # ---------------------------------------------------------------------------

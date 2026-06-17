@@ -11,14 +11,12 @@ from src.utils import (
     MEDAL_COLORS,
     MEDAL_ORDER,
     NEG_COLOR,
-    OKABE,
     PALETTE,
     POS_COLOR,
     SCALE_BLUE,
     SCALE_INTENSITY,
     SCALE_RECORD,
     SCALE_VENUE,
-    STATUS_COLORS,
     TIER_COLORS,
     style_plotly_chart,
 )
@@ -201,7 +199,7 @@ def create_discipline_medal_bar(medals: pd.DataFrame, top_n: int = 15):
         category_orders={"medal": MEDAL_ORDER},
         color_discrete_map=MEDAL_COLORS,
         orientation="h",
-        title="Medal-record volume is concentrated in team-heavy and multi-event disciplines",
+        title="Medal records cluster in team-heavy disciplines",
         labels={"count": "Athlete-medal records", "discipline": "Discipline"},
     )
     fig.update_layout(yaxis={"categoryorder": "total ascending"}, barmode="stack")
@@ -268,20 +266,25 @@ def create_medal_treemap(medals: pd.DataFrame, top_disciplines: int = 12):
 
 
 def create_medal_flow_sankey(medals: pd.DataFrame, top_countries: int = 7, top_disciplines: int = 8):
-    """Derived flow graph from country to discipline to medal color."""
+    """Bipartite flow graph from NOC to discipline (athlete-medal records).
+
+    The medal-colour layer is intentionally omitted: each event awards a near-fixed
+    gold/silver/bronze ratio, so a discipline -> colour layer carries almost no
+    information and only clutters the view. The insight -- which nation dominates
+    which sport -- lives entirely in the NOC -> discipline flow.
+    """
     if medals.empty:
-        return empty_figure("Country to discipline to medal flow")
+        return empty_figure("NOC to discipline flow")
 
     top_codes = medals["code"].value_counts().head(top_countries).index.tolist()
     top_sports = medals["discipline"].value_counts().head(top_disciplines).index.tolist()
     df = medals[medals["code"].isin(top_codes) & medals["discipline"].isin(top_sports)].copy()
     if df.empty:
-        return empty_figure("Country to discipline to medal flow")
+        return empty_figure("NOC to discipline flow")
 
     country_nodes = top_codes
     sport_nodes = top_sports
-    medal_nodes = MEDAL_ORDER
-    labels = country_nodes + sport_nodes + medal_nodes
+    labels = country_nodes + sport_nodes
     node_index = {label: idx for idx, label in enumerate(labels)}
 
     country_sport = (
@@ -289,14 +292,9 @@ def create_medal_flow_sankey(medals: pd.DataFrame, top_countries: int = 7, top_d
         .size()
         .rename(columns={"size": "count"})
     )
-    sport_medal = (
-        df.groupby(["discipline", "medal"], as_index=False)
-        .size()
-        .rename(columns={"size": "count"})
-    )
 
-    # One colour per source country so a nation's ribbons can be traced through
-    # the graph. Sport->medal links inherit the destination medal colour.
+    # One colour per source country so a nation's ribbons can be traced to the
+    # disciplines where its medals come from.
     country_color = {code: PALETTE[i % len(PALETTE)] for i, code in enumerate(country_nodes)}
 
     sources = []
@@ -308,14 +306,8 @@ def create_medal_flow_sankey(medals: pd.DataFrame, top_countries: int = 7, top_d
         targets.append(node_index[row["discipline"]])
         values.append(row["count"])
         link_colors.append(_hex_to_rgba(country_color[row["code"]], 0.40))
-    for _, row in sport_medal.iterrows():
-        sources.append(node_index[row["discipline"]])
-        targets.append(node_index[row["medal"]])
-        values.append(row["count"])
-        link_colors.append(_hex_to_rgba(MEDAL_COLORS[row["medal"]], 0.45))
 
     node_colors = [country_color[code] for code in country_nodes] + ["#9AA7B4"] * len(sport_nodes)
-    node_colors += [MEDAL_COLORS[medal] for medal in medal_nodes]
     fig = go.Figure(
         data=[
             go.Sankey(
@@ -325,7 +317,7 @@ def create_medal_flow_sankey(medals: pd.DataFrame, top_countries: int = 7, top_d
             )
         ]
     )
-    fig.update_layout(title="Derived flow graph: NOC to discipline to medal color")
+    fig.update_layout(title="NOC to discipline: where each nation's medals come from")
     return style_plotly_chart(fig, height=560)
 
 
@@ -341,11 +333,22 @@ def create_age_histogram(athletes: pd.DataFrame):
         color="gender",
         nbins=35,
         barmode="overlay",
-        opacity=0.72,
+        category_orders={"gender": ["Male", "Female"]},
         color_discrete_map=GENDER_COLORS,
         title="Athlete age distribution: prime years and long tails",
         labels={"age": "Age", "count": "Athletes"},
     )
+    # Male (blue) is drawn first, Female (gold) over it -- both as translucent
+    # fills with a solid same-colour outline. Gold over blue blends to a readable
+    # green in the overlap (not a muddy grey), and each gender's silhouette stays
+    # legible via its outline. Trace opacity stays 1 so outlines read crisply --
+    # the transparency lives in the rgba fill, not the whole trace.
+    for tr in fig.data:
+        base = GENDER_COLORS.get(tr.name, "#888888")
+        tr.marker.color = _hex_to_rgba(base, 0.50)
+        tr.marker.line.color = base
+        tr.marker.line.width = 1.2
+    fig.update_layout(bargap=0.06)
     return style_plotly_chart(fig, height=420)
 
 
@@ -403,38 +406,54 @@ def create_gender_balance_by_discipline(athletes: pd.DataFrame, top_n: int = 15)
 
 
 def create_competition_load_scatter(athletes: pd.DataFrame):
-    """Relationship between event count, competition days, and medals."""
-    df = athletes.dropna(subset=["events_count", "competition_days", "age"]).copy()
+    """Aggregated athlete workload: one bubble per (events, days) cell.
+
+    Events entered and competition days are both discrete, so an individual
+    scatter overplots badly (every athlete lands on the same grid points). We
+    aggregate athletes into workload cells instead: bubble area is the number of
+    athletes in the cell and colour is that cell's medalist rate.
+    """
+    df = athletes.dropna(subset=["events_count", "competition_days"]).copy()
     if df.empty:
         return empty_figure("Competition load and medals")
 
-    if len(df) > 4500:
-        df = df.sample(4500, random_state=2024)
-    df["bubble_size"] = df["medal_total"].clip(lower=0) + 1
+    cells = (
+        df.groupby(["events_count", "competition_days"], as_index=False)
+        .agg(
+            athletes=("name", "count"),
+            medalists=("medal_status", lambda s: (s == "Medalist").sum()),
+            medals=("medal_total", "sum"),
+        )
+    )
+    cells["medalist_rate"] = (cells["medalists"] / cells["athletes"] * 100).round(1)
+
     fig = px.scatter(
-        df,
+        cells,
         x="events_count",
         y="competition_days",
-        size="bubble_size",
-        color="medal_status",
-        color_discrete_map=STATUS_COLORS,
-        hover_name="name",
+        size="athletes",
+        color="medalist_rate",
+        color_continuous_scale="Tealgrn",
         hover_data={
-            "discipline": True,
-            "country": True,
-            "age": ":.0f",
-            "medal_total": ":.0f",
-            "record_flag": True,
-            "bubble_size": False,
+            "events_count": True,
+            "competition_days": True,
+            "athletes": ":,",
+            "medalists": ":,",
+            "medalist_rate": ":.1f",
+            "medals": ":,",
         },
-        title="Competition load: event count, active days, and medals",
+        title="Competition load: athlete density and medalist rate by workload",
         labels={
             "events_count": "Events entered",
             "competition_days": "Competition days",
-            "medal_status": "Medal status",
+            "athletes": "Athletes in cell",
+            "medalists": "Medalists",
+            "medalist_rate": "Medalist rate (%)",
+            "medals": "Medals",
         },
-        size_max=18,
+        size_max=46,
     )
+    fig.update_layout(coloraxis_colorbar=dict(title="Medalist<br>rate (%)"))
     return style_plotly_chart(fig, height=460)
 
 
@@ -467,52 +486,6 @@ def create_venue_map(venue_summary: pd.DataFrame):
     )
     fig.update_layout(mapbox_style="carto-positron")
     return style_plotly_chart(fig, height=560)
-
-
-def create_competition_timeline(athletes: pd.DataFrame):
-    """Timeline of athlete starts and record-setting athletes."""
-    df = athletes.dropna(subset=["start_date"]).copy()
-    if df.empty:
-        return empty_figure("Competition start timeline")
-
-    timeline = (
-        df.groupby("start_date", as_index=False)
-        .agg(
-            athletes=("name", "count"),
-            medalists=("medal_status", lambda values: (values == "Medalist").sum()),
-            records=("record_flag", "sum"),
-        )
-        .sort_values("start_date")
-    )
-    # Single shared count axis (no dual axis): medalists are a subset of the
-    # athletes starting on each date, so plotting both on one scale is honest --
-    # the medalist line sits truthfully below the bars and shows medal-dense days.
-    fig = go.Figure()
-    fig.add_trace(
-        go.Bar(
-            x=timeline["start_date"],
-            y=timeline["athletes"],
-            name="Athletes starting",
-            marker_color=OKABE["blue"],
-            hovertemplate="%{x|%b %d}<br>Athletes: %{y:,}<extra></extra>",
-        )
-    )
-    fig.add_trace(
-        go.Scatter(
-            x=timeline["start_date"],
-            y=timeline["medalists"],
-            name="…of whom medalled",
-            mode="lines+markers",
-            marker_color=MEDAL_COLORS["Gold"],
-            hovertemplate="%{x|%b %d}<br>Medalists: %{y:,}<extra></extra>",
-        )
-    )
-    fig.update_layout(
-        title="Competition rhythm: athletes starting, and how many medalled",
-        xaxis_title="First competition date",
-        yaxis=dict(title="Athletes"),
-    )
-    return style_plotly_chart(fig, height=460)
 
 
 def create_record_bar(athletes: pd.DataFrame, top_n: int = 12):
@@ -659,29 +632,3 @@ def create_medal_race_animation(athletes: pd.DataFrame, top_n: int = 10):
         btn.args[1]["frame"]["duration"] = 650
         btn.args[1]["transition"]["duration"] = 300
     return style_plotly_chart(fig, height=480)
-
-
-def create_top_venues_bar(venue_summary: pd.DataFrame, top_n: int = 12):
-    """Horizontal bar of the busiest venues by athlete volume.
-
-    Replaces a raw venue table with a glanceable ranked chart; medal activity is
-    encoded as colour so the busiest and the most decorated venues are both
-    visible at once.
-    """
-    df = venue_summary.copy()
-    if df.empty:
-        return empty_figure("Busiest venues")
-
-    df = df.sort_values("athletes", ascending=False).head(top_n).sort_values("athletes", ascending=True)
-    fig = px.bar(
-        df,
-        x="athletes",
-        y="venue",
-        orientation="h",
-        color="medal_total",
-        color_continuous_scale=SCALE_VENUE,
-        hover_data={"disciplines": ":.0f", "medal_total": ":.0f", "records": ":.0f"},
-        title="Busiest venues by athlete volume",
-        labels={"athletes": "Athletes", "venue": "Venue", "medal_total": "Athlete medals"},
-    )
-    return style_plotly_chart(fig, height=max(360, 26 * len(df) + 150))
