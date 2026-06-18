@@ -89,8 +89,8 @@
     \begin{column}{0.52\textwidth}
       \small
       Public Paris~2024 CSVs (Kaggle ``Paris 2024 Olympic Summer Games'' +
-      data.gouv.fr), joined into analysis-ready tables --- both findable on
-      Google Dataset Search:
+      data.gouv.fr), joined into one working table --- both on Google Dataset
+      Search:
       \begin{itemize}
         \item \teallead{11,113} athletes across \teallead{206} NOCs
         \item \teallead{45} disciplines, \teallead{2,268} athlete--medal records
@@ -118,10 +118,9 @@
 \begin{frame}{Objective and story arc}
   \small
   \textbf{Problem.} A flat medal table hides geography, specialization,
-  demographics, and the spatial footprint of the Games.\\[4pt]
-  \textbf{Goal.} A guided, interactive story that pairs \teallead{explanatory}
-  narrative with \teallead{exploratory} filtering --- four linked sections,
-  broad to narrow:
+  demographics, and venue spread.\\[4pt]
+  \textbf{Goal.} Four sections, broad to narrow: follow the \teallead{guided
+  story} first, then use the \teallead{filters} to explore on each page.
   \vspace{6pt}
   \begin{columns}[T]
     \column{0.24\textwidth}\centering
@@ -169,9 +168,9 @@
     \column{0.62\textwidth}\centering
       \includegraphics[width=\linewidth]{figures/world_medal_map.pdf}
     \column{0.36\textwidth}\small
-      Colour intensity makes the USA--China lead \teallead{pop pre-attentively}
-      before any reading. Olympic NOC codes are mapped to ISO-3 so geometry
-      resolves.\\[6pt]
+      Colour intensity makes the USA--China lead \teallead{visible before you
+      read a single label}. NOC codes are mapped to ISO-3 so country geometry
+      works.\\[6pt]
       \techtag{Choropleth; colour-intensity encoding; pre-attentive processing.}
   \end{columns}
 \end{frame}
@@ -272,18 +271,17 @@
     \column{0.5\textwidth}
       \teallead{Storytelling}
       \begin{itemize}
-        \item Author-driven arc, reader-driven on each page
-        \item Each section leads with \textbf{headline KPI cards}, then answers visually
+        \item We set the story order; viewers use filters on each page
+        \item Each section opens with \textbf{summary numbers}, then shows them visually
         \item \textbf{No raw data dumps} --- show the data, detail on hover
         \item Colourblind-safe Okabe--Ito palette; host-nation spotlight
       \end{itemize}
   \end{columns}
   \vspace{4pt}
   \begin{block}{Where we drew the line}
-    \footnotesize \textbf{Animation \emph{is} used} --- but only on the
-    time-ordered medal race, where motion carries information. Uncertainty bands
-    and trend smoothing are left out: a completed-event snapshot has no
-    sampling error to show.
+    \footnotesize \textbf{Animation \emph{is} used} --- but only on the medal
+    race timeline, where time ordering makes it meaningful. No trend lines or
+    error bands: the data is final, nothing is uncertain.
   \end{block}
 \end{frame}
 
@@ -292,7 +290,7 @@
   \small
   \begin{enumerate}
     \item \teallead{Gold was a dead heat, totals were not.} USA \& China each 40
-      gold; USA led totals 126--91 through breadth.
+      gold; USA led on total medals 126--91.
     \item \teallead{Hosting moved the table.} France +31 vs Tokyo (largest swing);
       Japan $-13$.
     \item \teallead{Specialization defines mid-tier powers.} NED hockey, GBR
@@ -315,7 +313,7 @@
     \begin{minipage}{0.82\paperwidth}\centering\vspace{5pt}
       {\Large\bfseries\color{white} The medal table only tells you who won.}\\[7pt]
       {\color{white!92} Who rose, who specialised, who actually showed up, and where ---\\
-      that side of Paris 2024 appears only once you let people explore the data.}\\[13pt]
+      that story only comes out when you can interact with the data.}\\[13pt]
       {\large\bfseries\color{gold} Thank you.}\quad{\color{white!88} We'd love your questions.}
       \vspace{5pt}
     \end{minipage}}
