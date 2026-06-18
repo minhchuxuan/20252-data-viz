@@ -2,12 +2,11 @@
 
 Streamlit dashboard and report materials for the IT5425 Data Management and Visualization capstone project.
 
-The dashboard is designed as a **data story, not a data dump**. There is **no
-sidebar**: navigation is inline **tabs** and every control sits in the page next
-to the chart it drives, so you interact with the data directly. Each chapter
-leads with animated **BANs** ("Big Ass Numbers" — count-up KPI cards), shows the
-data visually in dense multi-column grids, and keeps detail on demand in tooltips
-(no raw tables). Colour is the colourblind-safe Okabe–Ito palette, used only to
+The dashboard is designed as a **data story, not a data dump**. Navigation is
+inline **tabs** and every control sits in the page next to the chart it drives, so
+you interact with the data directly. Each chapter leads with animated **headline
+KPI cards**, shows the data visually in dense multi-column grids, and keeps detail
+on demand in tooltips (no raw tables). Colour is the colourblind-safe Okabe–Ito palette, used only to
 carry meaning. Design cues are drawn from *The Big Book of Dashboards* (Wexler,
 Shaffer, Cotgreave).
 

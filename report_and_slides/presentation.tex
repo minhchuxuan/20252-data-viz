@@ -266,7 +266,7 @@
     \column{0.5\textwidth}
       \teallead{Interaction}
       \begin{itemize}
-        \item \textbf{No sidebar} --- tabs switch sections; controls sit beside each chart
+        \item Tabs switch sections; every control sits beside the chart it drives
         \item Inline segmented pills + multiselects + sliders
         \item Details-on-demand: hover tooltips; zoom/pan on every chart
         \item Empty filters fall back to styled placeholders, never crash
@@ -307,30 +307,24 @@
 \end{frame}
 
 % --------------------------- CLOSE ----------------------------------
-\begin{frame}{Reproducible by design}
-  \small
-  \begin{columns}[T]
-    \column{0.55\textwidth}
-      \teallead{Figures match the dashboard}
-      \begin{itemize}
-        \item Every figure is generated from the same code that drives the live dashboard
-        \item No screenshots and no hand-drawn charts --- the report cannot drift from the app
-        \item A single pipeline regenerates all figures from the source data
-      \end{itemize}
-    \column{0.45\textwidth}
-      \teallead{Checked}
-      \begin{itemize}
-        \item All four sections and every control exercised, including empty and narrow selections
-        \item Empty selections degrade gracefully to a styled ``no data'' state
-        \item Row counts, data types, and missing-data rates reconcile with the source
-      \end{itemize}
-  \end{columns}
+{
+\setbeamertemplate{background}{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{assets/paris2024_eiffel.jpg}}
+\begin{frame}[plain]
   \vfill
   \begin{center}
-    {\color{gold}\rule{0.7\paperwidth}{1.6pt}}\\[6pt]
-    {\large\bfseries\color{charcoal} Thank you} \quad
-    {\color{slate} Questions welcome.}
+  \colorbox{charcoal!90}{%
+    \begin{minipage}{0.82\paperwidth}\centering\vspace{5pt}
+      {\Large\bfseries\color{white} The medal table only tells you who won.}\\[7pt]
+      {\color{white!92} Who rose, who specialised, who actually showed up, and where ---\\
+      that side of Paris 2024 appears only once you let people explore the data.}\\[13pt]
+      {\large\bfseries\color{gold} Thank you.}\quad{\color{white!88} We'd love your questions.}
+      \vspace{5pt}
+    \end{minipage}}
   \end{center}
+  \vfill
+  \hfill{\tiny\color{white!85} Olympic rings on the Eiffel Tower $\cdot$ photo by Ibex73, CC BY 4.0, via Wikimedia Commons}\hspace{8pt}\strut
 \end{frame}
+}
 
 \end{document}
