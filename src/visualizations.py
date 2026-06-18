@@ -48,6 +48,7 @@ def empty_figure(title: str, message: str = "No data for the current filters."):
 def create_world_medal_map(country_stats: pd.DataFrame):
     """World choropleth of Paris 2024 total medals by NOC."""
     df = country_stats.dropna(subset=["iso_alpha"]).copy()
+    df = df[df["total"] > 0]
     if df.empty:
         return empty_figure("Global medal geography")
 
