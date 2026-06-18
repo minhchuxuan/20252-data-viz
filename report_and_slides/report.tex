@@ -42,6 +42,12 @@
 \definecolor{paperbg}{HTML}{FBFBFA}
 \definecolor{rulegray}{HTML}{D9DEE7}
 \definecolor{softgray}{HTML}{F2F4F7}
+% Olympic ring colours
+\definecolor{olympblue}{HTML}{0085C7}
+\definecolor{olympyellow}{HTML}{F4C300}
+\definecolor{olympblack}{HTML}{20242A}
+\definecolor{olympgreen}{HTML}{009F6B}
+\definecolor{olympred}{HTML}{DF0024}
 
 \hypersetup{
   colorlinks=true, linkcolor=ocean, urlcolor=teal, citecolor=teal,
@@ -96,13 +102,13 @@
   before upper={\textbf{\color{charcoal}#1}\par\smallskip}
 }
 
-% KPI "card" used on the executive page.
-\newtcolorbox{kpicard}[2]{
+% KPI "card" used on the executive page. #3 = Olympic ring accent colour.
+\newtcolorbox{kpicard}[3]{
   enhanced, halign=center, width=\linewidth,
-  colback=white, colframe=rulegray, boxrule=0.6pt, arc=3pt,
-  top=6pt, bottom=6pt, left=2pt, right=2pt,
-  overlay={\draw[gold,line width=2.4pt] ([yshift=-0.6pt]frame.north west)--([yshift=-0.6pt]frame.north east);},
-  before upper={\centering\color{charcoal}\sffamily\bfseries\large #1\par
+  colback=white, colframe=rulegray, boxrule=0.6pt, arc=4pt,
+  top=18pt, bottom=16pt, left=2pt, right=2pt,
+  overlay={\draw[#3,line width=3.5pt] ([yshift=-0.9pt]frame.north west)--([yshift=-0.9pt]frame.north east);},
+  before upper={\centering\color{charcoal}\sffamily\bfseries\LARGE #1\par\vspace{5pt}
     {\color{slate}\sffamily\scriptsize\MakeUppercase{#2}}}
 }
 
@@ -146,11 +152,11 @@ Nguyen Thanh Vinh\,(20235576) \quad Nguyen Dinh Truong\,(20235566)}\\[8pt]
 
 % KPI strip on the cover
 \begin{tabularx}{\linewidth}{XXXXX}
-\begin{kpicard}{11{,}113}{Athletes} \end{kpicard} &
-\begin{kpicard}{206}{NOCs} \end{kpicard} &
-\begin{kpicard}{45}{Disciplines} \end{kpicard} &
-\begin{kpicard}{2{,}268}{Medal records} \end{kpicard} &
-\begin{kpicard}{41}{Venues mapped} \end{kpicard} \\
+\begin{kpicard}{11{,}113}{Athletes}{olympblue} \end{kpicard} &
+\begin{kpicard}{206}{NOCs}{olympyellow} \end{kpicard} &
+\begin{kpicard}{45}{Disciplines}{olympblack} \end{kpicard} &
+\begin{kpicard}{2{,}268}{Medal records}{olympgreen} \end{kpicard} &
+\begin{kpicard}{41}{Venues mapped}{olympred} \end{kpicard} \\
 \end{tabularx}
 \vspace{1.6cm}
 
