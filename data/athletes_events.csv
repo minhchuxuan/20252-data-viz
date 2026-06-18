@@ -72,6 +72,7 @@ code,events
 1535349,Men's Synchronised 3m Springboard
 1535350,Jumping Individual
 1535350,Jumping Team
+1535351,Jumping Individual
 1535351,Jumping Team
 1535354,Men's 100m Breaststroke
 1535354,Men's 200m Breaststroke
@@ -149,6 +150,7 @@ code,events
 1535853,Men's Dinghy
 1535854,Women's 100m Breaststroke
 1535854,Women's 200m Breaststroke
+1535854,Women's 4 x 100m Medley Relay
 1535856,Men's 100m Freestyle
 1535856,Men's 50m Freestyle
 1535858,Women's 100m
@@ -205,7 +207,6 @@ code,events
 1536585,Women's 20km Race Walk
 1536599,Men's 20km Race Walk
 1536600,Men's 20km Race Walk
-1536600,Marathon Race Walk Relay Mixed
 1536624,Women's Singles
 1536632,Women's Individual
 1536648,Men's Singles
@@ -222,7 +223,7 @@ code,events
 1536971,Men's 89kg
 1536983,Women's 1500m
 1536990,Women's 1500m
-1536992,Women's 1500m
+1536992,Women's 5000m
 1536996,Men's Kayak Single 1000m
 1536997,Men's 50m Freestyle
 1536998,"Men's 10,000m"
@@ -232,7 +233,6 @@ code,events
 1537010,Women's 100m
 1537012,Women's 49kg
 1537049,"Men's 10,000m"
-1537049,Men's 5000m
 1537052,Men's 1500m
 1537053,Men's 5000m
 1537057,Men's 5000m
@@ -318,6 +318,7 @@ code,events
 1538136,Women's Singles
 1538136,Women's Team
 1538146,Skeet Women
+1538146,Skeet Mixed Team
 1538150,Men's 100m Breaststroke
 1538151,Men's Singles
 1538151,Men's Team
@@ -428,6 +429,7 @@ code,events
 1539607,25m Rapid Fire Pistol Men
 1539611,50m Rifle 3 Positions Men
 1539615,Skeet Men
+1539615,Skeet Mixed Team
 1539628,25m Rapid Fire Pistol Men
 1539636,10m Air Rifle Men
 1539636,10m Air Rifle Mixed Team
@@ -456,6 +458,7 @@ code,events
 1539963,Women's Marathon
 1539966,Women's 4 x 100m Freestyle Relay
 1539966,Relay Only Athlete
+1539968,Men's 4 x 100m Medley Relay
 1539968,Relay Only Athlete
 1539969,Men's 10km
 1539969,Men's 1500m Freestyle
@@ -619,8 +622,10 @@ code,events
 1541630,Women's Doubles
 1541633,Women's Singles
 1541652,Women -49kg
+1541656,Women's 4 x 100m Medley Relay
 1541656,Relay Only Athlete
 1541659,Men's Cross-country
+1541672,Women's 4 x 100m Medley Relay
 1541672,Relay Only Athlete
 1541730,Men's +92kg
 1541773,Men's 50m Freestyle
@@ -645,8 +650,8 @@ code,events
 1542547,Men's Team
 1542547,Mixed Doubles
 1542549,Women's Singles
-1542549,Women's Team
 1542549,Mixed Doubles
+1542550,Women's Team
 1542553,Women's Team
 1542726,Men -90 kg
 1542850,Men's 400m Hurdles
@@ -685,6 +690,7 @@ code,events
 1543061,Men
 1543064,Men
 1543080,Women's 100m Backstroke
+1543085,Men's Freestyle 57kg
 1543088,Men's Freestyle 125kg
 1543090,Men's 800m
 1543093,Men's 200m Breaststroke
@@ -704,16 +710,20 @@ code,events
 1543297,Women
 1543299,Women
 1543302,Men's 50m Freestyle
+1543303,Men's 4 x 100m Medley Relay
 1543303,Relay Only Athlete
 1543304,Women's 100m Breaststroke
 1543304,Women's 200m Breaststroke
+1543304,Women's 4 x 100m Medley Relay
 1543305,Women's 100m Butterfly
 1543305,Women's 200m Individual Medley
 1543305,Women's 400m Individual Medley
+1543305,Women's 4 x 100m Medley Relay
 1543306,Men's Skiff
 1543307,Men's Skiff
 1543310,Women's Dinghy
 1543312,Women's 4 x 100m Freestyle Relay
+1543312,Women's 4 x 100m Medley Relay
 1543312,Relay Only Athlete
 1543314,Men's Road Race
 1543314,Men's Individual Time Trial
@@ -912,9 +922,11 @@ code,events
 1546048,Women's 50kg
 1546049,Women's 54kg
 1546051,Men's 92kg
+1546052,Women's 4 x 400m Relay
 1546052,4 x 400m Relay Mixed
 1546055,Women's 100m Backstroke
 1546055,Women's 4 x 100m Freestyle Relay
+1546055,Women's 4 x 100m Medley Relay
 1546055,Women's 50m Freestyle
 1546057,Men's 71kg
 1546073,Women's 200m
@@ -985,7 +997,6 @@ code,events
 1547913,Men's Eight
 1547914,Women's Eight
 1548262,Women's Marathon
-1548337,Women's 400m
 1548337,Women's 4 x 400m Relay
 1548337,4 x 400m Relay Mixed
 1548352,Women's 4 x 100m Relay
@@ -993,8 +1004,7 @@ code,events
 1548401,Men +80kg
 1548402,Women's 200m Butterfly
 1548409,Men's 400m Freestyle
-1548487,Jumping Individual
-1548487,Jumping Team
+1548482,Jumping Individual
 1548514,"Men's 10,000m"
 1548514,Men's 5000m
 1548516,Women's Marathon
@@ -1019,7 +1029,6 @@ code,events
 1548928,Women -57 kg
 1548933,Individual All-Around
 1548934,Men +100 kg
-1548934,Mixed Team
 1548935,Men -66 kg
 1548941,Men -66 kg
 1548941,Mixed Team
@@ -1299,6 +1308,7 @@ code,events
 1552087,Men's Boulder & Lead
 1552089,Women's Boulder & Lead
 1552154,Women's 4 x 400m Relay
+1552155,Men's 4 x 400m Relay
 1552155,4 x 400m Relay Mixed
 1552156,Men's 100m
 1552156,Men's 4 x 100m Relay
@@ -1308,27 +1318,34 @@ code,events
 1552160,Women's 4 x 400m Relay
 1552161,Men's 4 x 100m Relay
 1552162,Men's 200m
+1552162,Men's 4 x 100m Relay
 1552163,Women's 100m
 1552163,Women's 4 x 100m Relay
 1552166,Women's 4 x 100m Relay
 1552167,Men's 100m
 1552167,Men's 4 x 100m Relay
 1552168,Women's 200m
+1552168,Women's 4 x 100m Relay
 1552169,Men's 4 x 400m Relay
 1552170,Women's 400m
 1552170,Women's 4 x 400m Relay
+1552170,4 x 400m Relay Mixed
 1552171,Men's 4 x 400m Relay
 1552172,Men's 4 x 100m Relay
 1552173,Men's 4 x 100m Relay
 1552174,Women's 4 x 100m Relay
+1552175,Women's 4 x 400m Relay
 1552175,4 x 400m Relay Mixed
 1552177,Men's 400m
-1552177,Men's 4 x 400m Relay
+1552294,Men's 4 x 400m Relay
 1552294,4 x 400m Relay Mixed
 1552295,Women's 4 x 100m Relay
 1552296,Men's 400m
 1552296,Men's 4 x 400m Relay
+1552296,4 x 400m Relay Mixed
 1552298,Men's 200m
+1552298,Men's 4 x 100m Relay
+1552299,Women's 4 x 400m Relay
 1552299,4 x 400m Relay Mixed
 1552300,Women's 4 x 400m Relay
 1552303,Men's 1500m
@@ -1354,9 +1371,9 @@ code,events
 1552351,Men's 3000m Steeplechase
 1552358,Women's 400m Hurdles
 1552362,Women's 400m Hurdles
-1552363,Women's 400m Hurdles
 1552364,Women's 400m Hurdles
 1552365,Men's 400m Hurdles
+1552365,Men's 4 x 400m Relay
 1552368,Women's Sabre Individual
 1552370,Men -100 kg
 1552370,Mixed Team
@@ -1409,7 +1426,9 @@ code,events
 1553258,Women's Team
 1553258,Mixed Team
 1553260,Skeet Men
+1553260,Skeet Mixed Team
 1553262,Skeet Women
+1553262,Skeet Mixed Team
 1553271,10m Air Rifle Women
 1553277,10m Air Pistol Women
 1553277,25m Pistol Women
@@ -1439,11 +1458,12 @@ code,events
 1553753,Women's 4 x 400m Relay
 1553910,Women's Triple Jump
 1553912,Women's 100m Hurdles
+1553914,Women's 4 x 400m Relay
 1553914,4 x 400m Relay Mixed
 1554140,Trap Men
 1554520,Women's Shot Put
-1554521,Women's 100m Hurdles
 1554523,Women's 400m Hurdles
+1554523,Women's 4 x 400m Relay
 1554524,Women's 400m Hurdles
 1554526,Men's 400m Hurdles
 1554735,Men's Sabre Individual
@@ -1493,6 +1513,7 @@ code,events
 1555098,Women's 60kg
 1555100,Women's 4 x 100m Freestyle Relay
 1555100,Relay Only Athlete
+1555101,Men's 4 x 100m Medley Relay
 1555101,Men's 50m Freestyle
 1555109,Eventing Individual
 1555109,Eventing Team
@@ -1509,7 +1530,6 @@ code,events
 1555457,Women's Long Jump
 1555479,Men's Kayak Single 1000m
 1555493,Men's Kite
-1555498,Men's 400m Hurdles
 1555500,Women's Marathon
 1555501,Men's Marathon
 1555502,Men's 100m
@@ -2065,7 +2085,6 @@ code,events
 1563543,Men -66 kg
 1563543,Mixed Team
 1563544,Men -60 kg
-1563544,Mixed Team
 1563547,Women -48 kg
 1563547,Mixed Team
 1563549,Men -90 kg
@@ -2281,20 +2300,23 @@ code,events
 1565147,Men's 200m Freestyle
 1565147,Men's 400m Freestyle
 1565147,Men's 800m Freestyle
+1565148,Men's 4 x 100m Medley Relay
 1565148,Relay Only Athlete
 1565150,Men's 100m Butterfly
+1565150,Men's 4 x 100m Medley Relay
 1565154,Men's 200m Butterfly
+1565155,Men's 4 x 100m Medley Relay
 1565155,Relay Only Athlete
 1565158,Men's 10km
 1565161,Women's 200m Individual Medley
 1565166,Men's 100m Backstroke
 1565166,Men's 100m Breaststroke
+1565166,Men's 4 x 100m Medley Relay
 1565170,Duet
 1565171,Duet
 1565173,Men's 10m Platform
 1565210,4 x 400m Relay Mixed
 1565212,Men's Marathon
-1565214,Men's Discus Throw
 1565215,Women's Individual
 1565232,Men's 100m Freestyle
 1565505,Men's Long Jump
@@ -2337,7 +2359,6 @@ code,events
 1566118,Men's Road Race
 1566120,Men's Madison
 1566122,Men's Madison
-1566123,Men's Madison
 1566123,Men's Omnium
 1566125,Men's Cross-country
 1566126,Women's Cross-country
@@ -2405,7 +2426,6 @@ code,events
 1566680,Men's 400m Hurdles
 1566681,Men's High Jump
 1566682,Men's 400m Hurdles
-1566684,Men's Pole Vault
 1566687,Men's 800m
 1566689,Men's 400m
 1566702,Men's Greco-Roman 97kg
@@ -2647,6 +2667,7 @@ code,events
 1569563,Women's 59kg
 1569570,Women's 71kg
 1569571,Women's 1500m Freestyle
+1569571,Women's 4 x 100m Medley Relay
 1569571,Women's 800m Freestyle
 1569762,Women's 49kg
 1569819,Men's Sabre Individual
@@ -2693,7 +2714,6 @@ code,events
 1570111,Women's Triple Jump
 1570118,Men's 3000m Steeplechase
 1570124,Men's 1500m
-1570126,Women's 1500m
 1570155,Mixed Doubles
 1570195,Men's 20km Race Walk
 1570290,Women's Singles
@@ -2749,6 +2769,7 @@ code,events
 1571506,Men's Greco-Roman 130kg
 1571517,Men's High Jump
 1571520,Women's 20km Race Walk
+1571520,Marathon Race Walk Relay Mixed
 1571522,Women's Triple Jump
 1571523,Women's 20km Race Walk
 1571529,4 x 400m Relay Mixed
@@ -2763,6 +2784,7 @@ code,events
 1571559,Women's High Jump
 1571561,Marathon Race Walk Relay Mixed
 1571562,Men's 400m
+1571562,4 x 400m Relay Mixed
 1571563,Men's Hammer Throw
 1571564,Women's 20km Race Walk
 1571570,Men's High Jump
@@ -2826,6 +2848,7 @@ code,events
 1572372,Men's Marathon
 1572435,Women's Individual Stroke Play
 1572437,Women's Individual Stroke Play
+1572442,Men's 4 x 100m Medley Relay
 1572442,Relay Only Athlete
 1572444,Lightweight Men's Double Sculls
 1572450,Jumping Individual
@@ -2848,9 +2871,11 @@ code,events
 1572547,Mixed 4 x 100m Medley Relay
 1572548,Women's 100m Breaststroke
 1572548,Women's 200m Breaststroke
+1572548,Women's 4 x 100m Medley Relay
 1572549,Women's 100m Backstroke
 1572549,Women's 100m Butterfly
 1572549,Women's 4 x 100m Freestyle Relay
+1572549,Women's 4 x 100m Medley Relay
 1572551,Men's 10km
 1572551,Men's 1500m Freestyle
 1572551,Men's 400m Freestyle
@@ -2865,9 +2890,11 @@ code,events
 1572556,Men's 50m Freestyle
 1572557,Women's 100m Freestyle
 1572557,Women's 4 x 100m Freestyle Relay
+1572557,Women's 4 x 100m Medley Relay
 1572557,Women's 50m Freestyle
 1572558,Women's 4 x 100m Freestyle Relay
 1572558,Relay Only Athlete
+1572559,Women's 4 x 100m Medley Relay
 1572559,Relay Only Athlete
 1572559,Mixed 4 x 100m Medley Relay
 1572560,Women's 100m Freestyle
@@ -2889,12 +2916,14 @@ code,events
 1572823,Men's Marathon
 1572906,Women's Cross-country
 1572917,Skeet Women
+1572917,Skeet Mixed Team
 1572918,Trap Men
 1572919,10m Air Rifle Men
 1572919,50m Rifle 3 Positions Men
 1572920,10m Air Rifle Men
 1572920,50m Rifle 3 Positions Men
 1572921,Skeet Men
+1572921,Skeet Mixed Team
 1572922,Skeet Men
 1572925,25m Pistol Women
 1572928,Men's Road Race
@@ -2910,40 +2939,44 @@ code,events
 1572958,Men's Keirin
 1572958,Men's Sprint
 1572960,Women's Keirin
+1572960,Women's Sprint
 1572960,Women's Team Sprint
 1572971,4 x 400m Relay Mixed
 1572973,Men's Shot Put
 1572975,Men's 4 x 400m Relay
-1572977,Men's High Jump
 1572984,Women's 3000m Steeplechase
 1572993,Men's Javelin Throw
-1572997,Women's 400m
 1572997,Women's 4 x 400m Relay
+1572997,4 x 400m Relay Mixed
 1573001,Men's 4 x 400m Relay
 1573001,4 x 400m Relay Mixed
 1573011,Women's Heptathlon
 1573012,Women's 400m
 1573012,Women's 4 x 400m Relay
+1573012,4 x 400m Relay Mixed
 1573013,Women's 100m
 1573013,Women's 4 x 100m Relay
+1573014,Men's 4 x 400m Relay
 1573014,4 x 400m Relay Mixed
 1573015,Men's 110m Hurdles
 1573017,Marathon Race Walk Relay Mixed
 1573019,Men's 100m
 1573020,Men's Javelin Throw
 1573025,Women's 4 x 400m Relay
+1573025,4 x 400m Relay Mixed
 1573030,Women's Discus Throw
 1573035,Women's Keirin
 1573035,Women's Sprint
 1573035,Women's Team Sprint
 1573036,Women's Team Sprint
+1573037,Women's Keirin
 1573037,Women's Sprint
 1573037,Women's Team Sprint
 1573043,Men's Omnium
 1573045,Women's Madison
 1573046,Women's Madison
+1573046,Women's Omnium
 1573050,Women's Javelin Throw
-1573051,4 x 400m Relay Mixed
 1573053,Men's 20km Race Walk
 1573053,Marathon Race Walk Relay Mixed
 1573055,4 x 400m Relay Mixed
@@ -2954,6 +2987,7 @@ code,events
 1573079,Men's 4 x 400m Relay
 1573081,Marathon Race Walk Relay Mixed
 1573083,Men's Hammer Throw
+1573084,Women's 4 x 400m Relay
 1573084,4 x 400m Relay Mixed
 1573091,Men's 4 x 400m Relay
 1573095,Women's Long Jump
@@ -2966,7 +3000,6 @@ code,events
 1573121,Women's 3000m Steeplechase
 1573123,Women's Hammer Throw
 1573124,Women's 200m
-1573124,Women's 4 x 100m Relay
 1573126,Men's Javelin Throw
 1573127,Women's 4 x 400m Relay
 1573134,Men's Pole Vault
@@ -2988,6 +3021,7 @@ code,events
 1573181,Women's 800m
 1573183,Women's Hammer Throw
 1573185,Men's 4 x 400m Relay
+1573185,4 x 400m Relay Mixed
 1573186,Women's 20km Race Walk
 1573188,Women's High Jump
 1573198,Women's Individual
@@ -3078,8 +3112,6 @@ code,events
 1878037,Men's Horizontal Bar
 1878186,Women
 1878186,Women's Balance Beam
-1878325,Women's Road Race
-1878325,Women's Cross-country
 1878329,Women's Doubles
 1878345,Men's Shot Put
 1878346,Men's Hammer Throw
@@ -3216,6 +3248,7 @@ code,events
 1878979,Eventing Individual
 1879047,Women's Road Race
 1879047,Women's Individual Time Trial
+1879048,Men's Madison
 1879048,Men's Omnium
 1879048,Men's Team Pursuit
 1879050,Men's Madison
@@ -3247,7 +3280,6 @@ code,events
 1879167,Women's Road Race
 1879169,Men's Road Race
 1879171,Men's Cross-country
-1879179,Men's Madison
 1879179,Men's Team Pursuit
 1879180,Men's Madison
 1879180,Men's Omnium
@@ -3260,8 +3292,10 @@ code,events
 1879345,Men's Team
 1879357,Men's 100m Backstroke
 1879357,Men's 200m Backstroke
+1879357,Men's 4 x 100m Medley Relay
 1879371,Men's 100m Breaststroke
 1879371,Men's 200m Breaststroke
+1879371,Men's 4 x 100m Medley Relay
 1879372,Women's 4 x 100m Freestyle Relay
 1879372,Relay Only Athlete
 1879402,Men's 4 x 100m Freestyle Relay
@@ -3274,18 +3308,22 @@ code,events
 1879454,Women's 200m Backstroke
 1879462,Women's 100m Backstroke
 1879462,Women's 200m Backstroke
+1879462,Women's 4 x 100m Medley Relay
 1879464,Men's 100m Butterfly
 1879464,Men's 100m Freestyle
+1879464,Men's 4 x 100m Medley Relay
 1879467,Women's 4 x 100m Freestyle Relay
 1879467,Women's 50m Freestyle
 1879469,Men's Park
 1879474,Women's 4 x 100m Freestyle Relay
 1879474,Relay Only Athlete
 1879483,Men's 50m Freestyle
+1879488,Women's 4 x 100m Medley Relay
 1879488,Relay Only Athlete
 1879490,Men's 4 x 100m Freestyle Relay
 1879490,Relay Only Athlete
 1879495,Men's 4 x 100m Freestyle Relay
+1879495,Men's 4 x 100m Medley Relay
 1879495,Relay Only Athlete
 1879497,Relay Only Athlete
 1879497,Mixed 4 x 100m Medley Relay
@@ -3294,9 +3332,11 @@ code,events
 1879505,Men's 200m Butterfly
 1879515,Women's 100m Freestyle
 1879515,Women's 4 x 100m Freestyle Relay
+1879515,Women's 4 x 100m Medley Relay
 1879515,Women's 50m Freestyle
 1879515,Mixed 4 x 100m Medley Relay
 1879516,Women's 100m Breaststroke
+1879516,Women's 4 x 100m Medley Relay
 1879516,Mixed 4 x 100m Medley Relay
 1879517,Men's 4 x 100m Freestyle Relay
 1879517,Relay Only Athlete
@@ -3432,6 +3472,7 @@ code,events
 1880574,Women
 1880575,Women
 1880576,Women
+1880578,Women
 1880581,Women
 1880583,Women
 1880584,Women
@@ -3443,7 +3484,6 @@ code,events
 1880609,Women
 1880610,Women
 1880728,Women's 100m
-1880728,Women's 4 x 100m Relay
 1880735,Women's Individual
 1887539,Men's Individual
 1887548,Men's 50m Freestyle
@@ -3469,6 +3509,7 @@ code,events
 1887771,Mixed Doubles
 1887788,Jumping Individual
 1887788,Jumping Team
+1887827,Jumping Individual
 1887827,Jumping Team
 1887840,Women
 1887849,Women's Keirin
@@ -3507,11 +3548,13 @@ code,events
 1888104,Men's 400m Freestyle
 1888113,Women's 50m Freestyle
 1888124,Team
+1888124,Duet
 1888140,Men -68kg
 1888156,Women
 1888158,Women
 1888159,Women
 1888160,Women
+1888169,Women
 1888170,Women
 1888172,Women
 1888173,Women
@@ -3547,7 +3590,9 @@ code,events
 1888349,Women
 1888351,Women
 1888365,Team
+1888365,Duet
 1888388,Skeet Women
+1888388,Skeet Mixed Team
 1888389,10m Air Rifle Men
 1888389,50m Rifle 3 Positions Men
 1888389,10m Air Rifle Mixed Team
@@ -3555,6 +3600,7 @@ code,events
 1888404,Trap Women
 1888406,Trap Women
 1888409,Skeet Men
+1888409,Skeet Mixed Team
 1888414,10m Air Pistol Men
 1888414,10m Air Pistol Mixed Team
 1888422,50m Rifle 3 Positions Women
@@ -3594,11 +3640,13 @@ code,events
 1888885,Women's Individual
 1888908,Women
 1888912,Team
+1888912,Duet
 1888922,Women's 4 x 200m Freestyle Relay
 1888922,Relay Only Athlete
 1888932,Men
 1888936,Men
 1888960,Team
+1888960,Duet
 1888962,Men's Greco-Roman 97kg
 1888965,Women's 4 x 200m Freestyle Relay
 1888965,Relay Only Athlete
@@ -3621,6 +3669,7 @@ code,events
 1889010,Women's 4 x 200m Freestyle Relay
 1889010,Relay Only Athlete
 1889022,Team
+1889022,Duet
 1889028,Men's Individual Stroke Play
 1889030,Men's Individual Stroke Play
 1889033,Women's Individual Stroke Play
@@ -3631,7 +3680,9 @@ code,events
 1889082,10m Air Rifle Women
 1889082,50m Rifle 3 Positions Women
 1889098,Team
+1889098,Duet
 1889111,Team
+1889111,Duet
 1889113,Men's Dinghy
 1889116,Men
 1889120,Women's Dinghy
@@ -3682,9 +3733,9 @@ code,events
 1889698,Men's Keirin
 1889698,Men's Sprint
 1889698,Men's Team Sprint
+1889700,Men's Keirin
+1889700,Men's Sprint
 1889700,Men's Team Sprint
-1889701,Men's Keirin
-1889701,Men's Sprint
 1889701,Men's Team Sprint
 1889702,Women's Keirin
 1889702,Women's Sprint
@@ -3714,15 +3765,14 @@ code,events
 1889727,Women's Team Pursuit
 1889730,Women's Madison
 1889730,Women's Team Pursuit
-1889731,Women's Madison
-1889731,Women's Omnium
 1889731,Women's Team Pursuit
 1889732,Women's Road Race
 1889736,Women's Madison
+1889736,Women's Omnium
 1889736,Women's Team Pursuit
-1889738,Men's Madison
 1889738,Men's Team Pursuit
 1889745,Women's Cross-country
+1889748,Men's Madison
 1889748,Men's Omnium
 1889748,Men's Team Pursuit
 1889758,Men's Road Race
@@ -3739,6 +3789,7 @@ code,events
 1889794,Women
 1890259,Women's 400m
 1890259,Women's 4 x 400m Relay
+1890259,4 x 400m Relay Mixed
 1890561,Women's 100m
 1890561,Women's 4 x 100m Relay
 1890567,Men
@@ -3752,7 +3803,7 @@ code,events
 1890594,Women's High Jump
 1890602,Women's 800m
 1890607,Women's Discus Throw
-1890624,Women's 400m Hurdles
+1890624,Women's 4 x 400m Relay
 1890624,4 x 400m Relay Mixed
 1890736,Women's 100m Hurdles
 1890745,Women's 400m
@@ -3778,6 +3829,7 @@ code,events
 1891002,Women
 1891003,Men
 1891025,Men's Greco-Roman 97kg
+1891032,Women's Freestyle 62kg
 1891034,Men's Greco-Roman 130kg
 1891061,Women -48 kg
 1891062,Women -52 kg
@@ -3861,11 +3913,14 @@ code,events
 1891622,Men's 200m Breaststroke
 1891624,Women's 400m Individual Medley
 1891628,Women's 100m Butterfly
+1891628,Women's 4 x 100m Medley Relay
 1891628,Mixed 4 x 100m Medley Relay
 1891630,Women's 100m Breaststroke
 1891630,Women's 200m Breaststroke
+1891630,Women's 4 x 100m Medley Relay
 1891632,Women's 4 x 200m Freestyle Relay
 1891632,Relay Only Athlete
+1891634,Women's 4 x 100m Medley Relay
 1891634,Women's 4 x 200m Freestyle Relay
 1891634,Relay Only Athlete
 1891636,Women's 400m Individual Medley
@@ -3875,8 +3930,10 @@ code,events
 1891644,Women's 4 x 200m Freestyle Relay
 1891646,Men's 200m Butterfly
 1891648,Men's 100m Butterfly
+1891648,Men's 4 x 100m Medley Relay
 1891652,Men's 100m Butterfly
 1891652,Men's 200m Freestyle
+1891652,Men's 4 x 100m Medley Relay
 1891652,Men's 4 x 200m Freestyle Relay
 1891656,Men's 200m Breaststroke
 1891658,Men's 200m Individual Medley
@@ -4061,17 +4118,21 @@ code,events
 1893011,Lightweight Women's Double Sculls
 1893047,Women -70 kg
 1893067,Women's 4 x 100m Freestyle Relay
+1893067,Women's 4 x 100m Medley Relay
 1893067,Relay Only Athlete
 1893073,Women's 100m Butterfly
 1893073,Women's 200m Butterfly
 1893076,Women's 4 x 100m Freestyle Relay
 1893076,Women's 50m Freestyle
 1893078,Women's 4 x 100m Freestyle Relay
+1893078,Women's 4 x 100m Medley Relay
 1893078,Relay Only Athlete
+1893083,Women's 4 x 100m Medley Relay
 1893083,Relay Only Athlete
 1893084,Women's 4 x 100m Freestyle Relay
 1893084,Relay Only Athlete
 1893085,Women's 200m Breaststroke
+1893085,Women's 4 x 100m Medley Relay
 1893174,Men
 1893175,Men
 1893176,Men
@@ -4127,10 +4188,12 @@ code,events
 1893855,10m Air Rifle Mixed Team
 1893875,50m Rifle 3 Positions Women
 1893879,Skeet Women
+1893879,Skeet Mixed Team
 1893894,Trap Women
 1893896,10m Air Rifle Women
 1893896,10m Air Rifle Mixed Team
 1893921,Skeet Men
+1893921,Skeet Mixed Team
 1893930,10m Air Pistol Women
 1893930,25m Pistol Women
 1893930,10m Air Pistol Mixed Team
@@ -4359,17 +4422,18 @@ code,events
 1895559,Men's Pole Vault
 1895560,Men's High Jump
 1895561,Women's 400m Hurdles
+1895561,Women's 4 x 400m Relay
 1895562,Women's 400m Hurdles
 1895563,Men's 800m
 1895564,Women's 4 x 100m Relay
 1895565,Men's 800m
 1895568,Men's 400m
 1895568,Men's 4 x 400m Relay
+1895568,4 x 400m Relay Mixed
 1895572,Women's Marathon
 1895573,Men's Javelin Throw
 1895575,Men's 5000m
 1895577,Men's 4 x 400m Relay
-1895578,Women's 4 x 100m Relay
 1895579,"Men's 10,000m"
 1895579,Men's 5000m
 1895580,Women's 4 x 400m Relay
@@ -4384,6 +4448,7 @@ code,events
 1895589,4 x 400m Relay Mixed
 1895590,Men's 400m
 1895590,Men's 4 x 400m Relay
+1895590,4 x 400m Relay Mixed
 1895592,Women's 4 x 400m Relay
 1895594,Men's 1500m
 1895596,Women's Heptathlon
@@ -4490,10 +4555,10 @@ code,events
 1896034,Women's Kayak Cross
 1896045,Women's Kayak Single
 1896045,Women's Kayak Cross
+1896125,Men's Individual
 1896126,Women's Individual
 1896128,Men's Individual
 1896131,Women's Individual
-1896133,Men's Individual
 1896149,Men +80kg
 1896150,Women +67kg
 1896153,Men -68kg
@@ -4675,7 +4740,6 @@ code,events
 1896878,Men
 1896883,Men
 1896899,Men's Marathon
-1896900,Women's Heptathlon
 1896901,Women's High Jump
 1896902,Women's Triple Jump
 1896903,Men's Long Jump
@@ -4686,7 +4750,6 @@ code,events
 1896963,Men's Canoe Double 500m
 1896966,Men's Single Sculls
 1896987,Men's Sabre Individual
-1897002,Men's 3000m Steeplechase
 1897010,Men's 3000m Steeplechase
 1897013,Women's Freestyle 50kg
 1897019,Women's Freestyle 57kg
@@ -4780,8 +4843,8 @@ code,events
 1897380,Relay Only Athlete
 1897384,Men
 1897453,Men's Synchronised 10m Platform
-1897454,Men's 10m Platform
 1897455,Men's Synchronised 3m Springboard
+1897456,Men's 10m Platform
 1897456,Men's Synchronised 10m Platform
 1897459,Men's Synchronised 3m Springboard
 1897464,Women's Synchronised 10m Platform
@@ -4891,7 +4954,6 @@ code,events
 1897833,Women's 100m Hurdles
 1897836,Women's 100m
 1897843,Women's 100m
-1897843,Women's 200m
 1897860,Men's Singles
 1897877,Women's Road Race
 1897960,Men's Marathon
@@ -4909,12 +4971,11 @@ code,events
 1898169,Men's Individual Stroke Play
 1898170,Women's Individual Stroke Play
 1898173,Women's Individual Stroke Play
-1898199,Jumping Individual
-1898199,Jumping Team
 1898203,Women's Individual
 1898203,Mixed Team
 1898209,Jumping Individual
 1898209,Jumping Team
+1898219,Jumping Individual
 1898219,Jumping Team
 1898237,Men's 51kg
 1898245,Women's Javelin Throw
@@ -5224,7 +5285,6 @@ code,events
 1901275,Women's 59kg
 1901276,Men's 100m Backstroke
 1901284,Men's Marathon
-1901295,Men's Marathon
 1901298,Women's +81kg
 1901303,Men's 73kg
 1901306,Men's 89kg
@@ -5246,7 +5306,6 @@ code,events
 1901479,25m Rapid Fire Pistol Men
 1901483,Trap Men
 1901487,Women's Marathon
-1901490,Women's Marathon
 1901497,Women's Marathon
 1901503,Women's Marathon
 1901517,Men's 80kg
@@ -5273,14 +5332,17 @@ code,events
 1901580,Women
 1901601,Men's 200m Breaststroke
 1901602,Men's 100m Breaststroke
+1901602,Men's 4 x 100m Medley Relay
 1901602,Mixed 4 x 100m Medley Relay
 1901610,Relay Only Athlete
 1901610,Mixed 4 x 100m Medley Relay
 1901611,Duet
 1901612,Men's 100m Freestyle
 1901612,Men's 200m Freestyle
+1901612,Men's 4 x 100m Medley Relay
 1901612,Men's 4 x 200m Freestyle Relay
 1901619,Men's 50m Freestyle
+1901630,Men's 4 x 100m Medley Relay
 1901630,Relay Only Athlete
 1901630,Mixed 4 x 100m Medley Relay
 1901637,Men's 200m Butterfly
@@ -5296,6 +5358,7 @@ code,events
 1901661,Relay Only Athlete
 1901663,Men's 100m Backstroke
 1901663,Men's 200m Backstroke
+1901663,Men's 4 x 100m Medley Relay
 1901666,Duet
 1901670,Men's 4 x 200m Freestyle Relay
 1901670,Relay Only Athlete
@@ -5442,10 +5505,10 @@ code,events
 1902694,Men's Team
 1902698,Women's Freestyle 50kg
 1902703,Men's Singles
-1902703,Men's Team
 1902703,Mixed Doubles
 1902709,Men's Singles
 1902709,Men's Team
+1902725,Men's Team
 1902786,Women's Freestyle 62kg
 1902787,Men's 73kg
 1902793,Women's Singles
@@ -5499,7 +5562,6 @@ code,events
 1903118,Women
 1903120,Women's Road Race
 1903120,Women's Individual Time Trial
-1903120,Women's Madison
 1903120,Women's Omnium
 1903122,Women
 1903123,Men
@@ -5519,8 +5581,6 @@ code,events
 1903151,Women's Keirin
 1903151,Women's Sprint
 1903152,Men's Team Pursuit
-1903153,Men's Madison
-1903153,Men's Team Pursuit
 1903154,Women's Madison
 1903158,Women's Madison
 1903159,Men's Cross-country
@@ -5537,6 +5597,7 @@ code,events
 1903170,Jumping Team
 1903173,Jumping Individual
 1903173,Jumping Team
+1903174,Jumping Individual
 1903174,Jumping Team
 1903175,Eventing Individual
 1903175,Eventing Team
@@ -5659,6 +5720,7 @@ code,events
 1903521,Men
 1903523,Women
 1903530,Women's 4 x 100m Freestyle Relay
+1903530,Women's 4 x 100m Medley Relay
 1903530,Women's 4 x 200m Freestyle Relay
 1903530,Relay Only Athlete
 1903531,Men's 400m Freestyle
@@ -5669,6 +5731,7 @@ code,events
 1903541,Women's 400m Individual Medley
 1903541,Women's 4 x 200m Freestyle Relay
 1903545,Women's 100m Backstroke
+1903545,Women's 4 x 100m Medley Relay
 1903545,Mixed 4 x 100m Medley Relay
 1903546,Men's 200m Individual Medley
 1903546,Men's 4 x 100m Freestyle Relay
@@ -5686,25 +5749,31 @@ code,events
 1903557,Women's 50m Freestyle
 1903557,Mixed 4 x 100m Medley Relay
 1903591,Men's 1500m Freestyle
+1903598,Men's 4 x 100m Medley Relay
 1903598,Relay Only Athlete
 1903598,Mixed 4 x 100m Medley Relay
 1903600,Women's 100m Butterfly
 1903600,Women's 200m Butterfly
+1903600,Women's 4 x 100m Medley Relay
 1903602,Men's 4 x 200m Freestyle Relay
 1903602,Relay Only Athlete
 1903608,Men's 100m Backstroke
 1903608,Men's 200m Backstroke
+1903608,Men's 4 x 100m Medley Relay
 1903610,Women's 4 x 100m Freestyle Relay
 1903610,Relay Only Athlete
 1903616,Men's 50m Freestyle
 1903617,Men's 100m Freestyle
 1903617,Men's 200m Freestyle
 1903617,Men's 4 x 100m Freestyle Relay
+1903617,Men's 4 x 100m Medley Relay
 1903617,Men's 4 x 200m Freestyle Relay
 1903621,Men's 200m Freestyle
 1903621,Men's 200m Individual Medley
 1903621,Men's 4 x 100m Freestyle Relay
+1903621,Men's 4 x 100m Medley Relay
 1903621,Men's 4 x 200m Freestyle Relay
+1903621,Mixed 4 x 100m Medley Relay
 1903622,Women's 200m Backstroke
 1903622,Women's 400m Individual Medley
 1903624,Women's 200m Butterfly
@@ -5741,12 +5810,11 @@ code,events
 1904055,Women's 4 x 400m Relay
 1904061,Men's 800m
 1904064,Women's 200m
+1904064,Women's 4 x 100m Relay
 1904077,Women's 4 x 400m Relay
 1904078,Men's 4 x 400m Relay
-1904082,Women's 4 x 100m Relay
 1904085,Men's Marathon
 1904086,Marathon Race Walk Relay Mixed
-1904096,Men's 800m
 1904098,Women's Long Jump
 1904099,Men's Triple Jump
 1904100,Women's Long Jump
@@ -5764,25 +5832,25 @@ code,events
 1904144,Women's 4 x 400m Relay
 1904146,Men's 4 x 400m Relay
 1904147,Women's 800m
-1904152,Men's Marathon
 1904157,Men's 110m Hurdles
 1904159,Marathon Race Walk Relay Mixed
 1904162,Women's Marathon
 1904164,Women's 800m
 1904165,Men's 20km Race Walk
+1904165,Marathon Race Walk Relay Mixed
 1904166,Men's 110m Hurdles
 1904171,Men's 20km Race Walk
 1904172,Men's 1500m
 1904172,Men's 5000m
 1904179,Women's 4 x 100m Relay
 1904182,Women's 20km Race Walk
+1904182,Marathon Race Walk Relay Mixed
 1904184,Women's 1500m
 1904186,Women's Marathon
 1904187,Women's 4 x 100m Relay
 1904188,"Men's 10,000m"
 1904188,Men's 5000m
 1904189,Men's Marathon
-1904194,Women's Marathon
 1904195,"Men's 10,000m"
 1904200,Women's 4 x 400m Relay
 1904227,Women's Kayak Single 500m
@@ -5932,6 +6000,7 @@ code,events
 1905347,Men's Dinghy
 1905365,Women's Triple Jump
 1905369,Women's 20km Race Walk
+1905369,Marathon Race Walk Relay Mixed
 1905371,Women's 1500m
 1905377,Women's 4 x 100m Relay
 1905397,Women's 3000m Steeplechase
@@ -6014,6 +6083,7 @@ code,events
 1906496,Men's Quadruple Sculls
 1906503,Men's Eight
 1906506,Women's Quadruple Sculls
+1906508,Men's Eight
 1906509,Men's Eight
 1906511,Women's Quadruple Sculls
 1906512,Men's Double Sculls
@@ -6021,7 +6091,6 @@ code,events
 1906514,Men's Quadruple Sculls
 1906515,Men's Single Sculls
 1906519,Women's Single Sculls
-1906531,Men's Eight
 1906531,Men's Pair
 1906534,Men's Eight
 1906539,Men's Double Sculls
@@ -6049,26 +6118,32 @@ code,events
 1907171,Women's 800m Freestyle
 1907174,Women's 200m Freestyle
 1907174,Women's 4 x 200m Freestyle Relay
+1907175,Women's 4 x 100m Medley Relay
 1907175,Relay Only Athlete
 1907178,Men's 100m Backstroke
 1907179,Men's 4 x 100m Freestyle Relay
+1907179,Men's 4 x 100m Medley Relay
 1907179,Relay Only Athlete
 1907183,Women's 100m Butterfly
+1907183,Women's 4 x 100m Medley Relay
 1907183,Mixed 4 x 100m Medley Relay
 1907184,Men's 200m Freestyle
 1907184,Men's 4 x 100m Freestyle Relay
 1907184,Men's 4 x 200m Freestyle Relay
 1907186,Men's 100m Freestyle
 1907186,Men's 4 x 100m Freestyle Relay
+1907186,Men's 4 x 100m Medley Relay
 1907186,Men's 4 x 200m Freestyle Relay
 1907187,Men's 1500m Freestyle
 1907187,Men's 800m Freestyle
 1907190,Women's 100m Breaststroke
+1907190,Women's 4 x 100m Medley Relay
 1907192,Men's 200m Backstroke
 1907192,Men's 200m Freestyle
 1907192,Men's 400m Freestyle
 1907192,Men's 4 x 200m Freestyle Relay
 1907193,Men's 100m Breaststroke
+1907193,Men's 4 x 100m Medley Relay
 1907194,Men's 4 x 200m Freestyle Relay
 1907194,Relay Only Athlete
 1907196,Women's 10km
@@ -6086,6 +6161,7 @@ code,events
 1907212,Women's Hammer Throw
 1907214,Men's Synchronised 10m Platform
 1907219,Men's 100m Breaststroke
+1907219,Men's 4 x 100m Medley Relay
 1907219,Mixed 4 x 100m Medley Relay
 1907220,Men's 50m Freestyle
 1907231,Women's 10km
@@ -6094,7 +6170,9 @@ code,events
 1907234,Men's 10km
 1907234,Men's 400m Freestyle
 1907240,Men's 100m Backstroke
+1907240,Men's 4 x 100m Medley Relay
 1907240,Mixed 4 x 100m Medley Relay
+1907247,Women's 4 x 100m Medley Relay
 1907247,Relay Only Athlete
 1907247,Mixed 4 x 100m Medley Relay
 1907251,Men's 4 x 100m Freestyle Relay
@@ -6315,15 +6393,19 @@ code,events
 1909209,Women's 800m Freestyle
 1909216,Women's 200m Individual Medley
 1909216,Women's 4 x 100m Freestyle Relay
+1909216,Women's 4 x 100m Medley Relay
 1909231,Women's 100m Backstroke
 1909231,Women's 100m Freestyle
 1909231,Women's 4 x 100m Freestyle Relay
+1909231,Women's 4 x 100m Medley Relay
 1909231,Women's 50m Freestyle
+1909231,Mixed 4 x 100m Medley Relay
 1909233,Women's 50m Freestyle
 1909235,Women's 4 x 200m Freestyle Relay
 1909235,Relay Only Athlete
 1909238,Women's 200m Backstroke
 1909240,Women's 4 x 100m Freestyle Relay
+1909240,Women's 4 x 100m Medley Relay
 1909240,Relay Only Athlete
 1909243,Women's 4 x 100m Freestyle Relay
 1909243,Relay Only Athlete
@@ -6331,6 +6413,7 @@ code,events
 1909246,Mixed 4 x 100m Medley Relay
 1909252,Women's 100m Backstroke
 1909252,Women's 200m Backstroke
+1909252,Women's 4 x 100m Medley Relay
 1909253,Women's 4 x 200m Freestyle Relay
 1909253,Relay Only Athlete
 1909255,Women's 4 x 200m Freestyle Relay
@@ -6338,6 +6421,7 @@ code,events
 1909259,Women's 100m Butterfly
 1909259,Women's 100m Freestyle
 1909259,Women's 4 x 100m Freestyle Relay
+1909259,Women's 4 x 100m Medley Relay
 1909259,Mixed 4 x 100m Medley Relay
 1909261,Men's 1500m Freestyle
 1909261,Men's 400m Freestyle
@@ -6345,28 +6429,35 @@ code,events
 1909269,Men's 800m Freestyle
 1909278,Men's 100m Freestyle
 1909278,Men's 4 x 100m Freestyle Relay
+1909278,Men's 4 x 100m Medley Relay
 1909281,Men's 4 x 200m Freestyle Relay
 1909281,Relay Only Athlete
 1909284,Men's 100m Butterfly
 1909284,Men's 100m Freestyle
+1909284,Men's 4 x 100m Medley Relay
 1909284,Men's 50m Freestyle
 1909285,Men's 4 x 100m Freestyle Relay
 1909285,Relay Only Athlete
 1909289,Men's 1500m Freestyle
 1909290,Men's 4 x 200m Freestyle Relay
 1909290,Relay Only Athlete
+1909292,Men's 4 x 100m Medley Relay
 1909292,Men's 50m Freestyle
 1909294,Men's 200m Butterfly
 1909294,Men's 200m Breaststroke
 1909294,Men's 200m Individual Medley
 1909294,Men's 400m Individual Medley
+1909294,Men's 4 x 100m Medley Relay
+1909294,Mixed 4 x 100m Medley Relay
 1909299,Men's 100m Backstroke
 1909299,Men's 200m Backstroke
+1909299,Men's 4 x 100m Medley Relay
 1909299,Mixed 4 x 100m Medley Relay
 1909306,Men's 4 x 100m Freestyle Relay
 1909306,Men's 4 x 200m Freestyle Relay
 1909306,Relay Only Athlete
 1909307,Men's 100m Butterfly
+1909307,Men's 4 x 100m Medley Relay
 1909311,Men's 100m Backstroke
 1909311,Men's 200m Backstroke
 1909314,Relay Only Athlete
@@ -6437,7 +6528,6 @@ code,events
 1910417,4 x 400m Relay Mixed
 1910418,Men's 3000m Steeplechase
 1910421,Women's 3000m Steeplechase
-1910422,Men's 800m
 1910438,"Women's 10,000m"
 1910443,Men's 1500m
 1910445,Men's 3000m Steeplechase
@@ -6446,7 +6536,6 @@ code,events
 1910451,Women's 5000m
 1910453,Women's 3000m Steeplechase
 1910454,Men's Shot Put
-1910456,Men's 3000m Steeplechase
 1910461,Men's 5000m
 1910462,4 x 400m Relay Mixed
 1910465,Men's Quadruple Sculls
@@ -6465,18 +6554,17 @@ code,events
 1910560,Women's 5000m
 1910569,Men's 1500m
 1910609,Men's 4 x 100m Relay
-1910614,Men's Marathon
 1910615,Men's Pole Vault
+1910618,Men's 4 x 400m Relay
 1910618,4 x 400m Relay Mixed
 1910629,Women's 100m Hurdles
-1910632,Men's 3000m Steeplechase
 1910634,Men's 110m Hurdles
 1910636,Women's 20km Race Walk
+1910636,Marathon Race Walk Relay Mixed
 1910644,Men's 400m
 1910644,Men's 4 x 400m Relay
 1910646,Women's Pole Vault
 1910647,Men's 20km Race Walk
-1910647,Marathon Race Walk Relay Mixed
 1910648,Men's Marathon
 1910650,Women's 800m
 1910657,Women's 4 x 400m Relay
@@ -6502,6 +6590,7 @@ code,events
 1910756,Men's Triple Jump
 1910760,Men's 1500m
 1910763,Women's 400m Hurdles
+1910763,Women's 4 x 400m Relay
 1910765,"Men's 10,000m"
 1910765,Men's 5000m
 1910769,Women's Triple Jump
@@ -6517,6 +6606,7 @@ code,events
 1910786,Women's Marathon
 1910787,Women's 800m
 1910791,Men's 4 x 400m Relay
+1910791,4 x 400m Relay Mixed
 1910794,Women's Long Jump
 1910802,Women's 800m
 1910812,Women -63 kg
@@ -6550,7 +6640,6 @@ code,events
 1911367,Men's 4 x 400m Relay
 1911391,Women's 200m Freestyle
 1911399,Men's Road Race
-1911407,Men's 200m
 1911407,Men's 400m
 1911407,Men's 4 x 400m Relay
 1911428,Men's Freestyle 97kg
@@ -6575,23 +6664,25 @@ code,events
 1911809,Men's 800m
 1911825,Women's Hammer Throw
 1911829,Women's 5000m
-1911836,Men's 110m Hurdles
 1911839,Women's 400m Hurdles
+1911839,Women's 4 x 400m Relay
+1911839,4 x 400m Relay Mixed
 1911843,Men's 200m
+1911843,Men's 4 x 100m Relay
 1911848,Women's High Jump
-1911850,Men's 800m
 1911852,Men's 3000m Steeplechase
 1911855,Men's 110m Hurdles
 1911865,Women's 20km Race Walk
-1911865,Marathon Race Walk Relay Mixed
 1911868,Men's Marathon
 1911877,Women's 4 x 100m Relay
 1911883,Women's 4 x 100m Relay
 1911884,Women's 200m
+1911884,Women's 4 x 100m Relay
 1911894,Men's Triple Jump
 1911897,Men's 4 x 400m Relay
 1911898,Men's 4 x 100m Relay
 1911900,Men's 20km Race Walk
+1911900,Marathon Race Walk Relay Mixed
 1911913,Women's 3000m Steeplechase
 1911914,Men's Discus Throw
 1911916,Women's 4 x 100m Relay
@@ -6600,6 +6691,7 @@ code,events
 1911921,Women's Discus Throw
 1911923,Women's Marathon
 1911929,Men's 4 x 400m Relay
+1911929,4 x 400m Relay Mixed
 1911932,Women's 100m Hurdles
 1911936,"Men's 10,000m"
 1911936,Men's 5000m
@@ -6609,8 +6701,6 @@ code,events
 1911949,Women's 4 x 400m Relay
 1911949,4 x 400m Relay Mixed
 1911954,Women's Hammer Throw
-1911959,Men's Pole Vault
-1911964,Women's Marathon
 1911966,Men's 800m
 1911968,Men's Javelin Throw
 1911975,Men's 4 x 100m Relay
@@ -6619,6 +6709,7 @@ code,events
 1911985,"Women's 10,000m"
 1911988,Men's 4 x 100m Relay
 1911990,Men's 200m
+1911990,Men's 4 x 100m Relay
 1911993,Women's 66kg
 1912007,Men's +92kg
 1912009,Men's 71kg
@@ -6636,7 +6727,6 @@ code,events
 1912496,Women
 1912502,Women
 1912503,Men's Cross-country
-1912507,Women's Road Race
 1912507,Women's Madison
 1912507,Women's Omnium
 1912507,Women's Team Pursuit
@@ -6661,9 +6751,10 @@ code,events
 1912525,Women's Individual Time Trial
 1912529,Women
 1912532,Women's Team Pursuit
+1912536,Men's Keirin
+1912536,Men's Sprint
 1912536,Men's Team Sprint
 1912537,Women's Cross-country
-1912538,Women's Road Race
 1912538,Women's Team Pursuit
 1912546,Men's Road Race
 1912546,Men's Cross-country
@@ -6671,7 +6762,6 @@ code,events
 1912549,Women's Cross-country
 1912553,Women
 1912557,Men's Madison
-1912557,Men's Team Pursuit
 1912560,Men's Team Pursuit
 1912562,Men's Road Race
 1912562,Men's Individual Time Trial
@@ -6710,7 +6800,6 @@ code,events
 1913028,Men's 100m Backstroke
 1913059,Men -80kg
 1913105,Men's Long Jump
-1913118,Men's 100m
 1913118,Men's 200m
 1913149,Women's 100m Backstroke
 1913152,Men's 100m Freestyle
@@ -6779,8 +6868,6 @@ code,events
 1913575,Men's 71kg
 1913631,Men's Individual
 1913631,Mixed Team
-1913633,Jumping Individual
-1913633,Jumping Team
 1913646,Women
 1913647,Women
 1913648,Women
@@ -6871,6 +6958,7 @@ code,events
 1913975,Trap Women
 1913976,Trap Women
 1913978,Skeet Women
+1913978,Skeet Mixed Team
 1913981,Skeet Women
 1913983,Women's Individual
 1913983,Women's Team
@@ -6937,9 +7025,13 @@ code,events
 1915319,Trap Men
 1915320,Trap Men
 1915325,Skeet Women
+1915325,Skeet Mixed Team
 1915326,Skeet Women
+1915326,Skeet Mixed Team
 1915330,Skeet Men
+1915330,Skeet Mixed Team
 1915333,Skeet Men
+1915333,Skeet Mixed Team
 1915338,Women's 400m
 1915343,Women's 100m Backstroke
 1915343,Women's 100m Butterfly
@@ -6947,7 +7039,8 @@ code,events
 1915348,Women's 4 x 400m Relay
 1915348,4 x 400m Relay Mixed
 1915349,Women's 400m Hurdles
-1915352,4 x 400m Relay Mixed
+1915349,Women's 4 x 400m Relay
+1915349,4 x 400m Relay Mixed
 1915353,Women's 1500m
 1915355,Women's Marathon
 1915357,Men's 1500m
@@ -6959,6 +7052,7 @@ code,events
 1915370,Men's Madison
 1915370,Men's Omnium
 1915370,Men's Team Pursuit
+1915371,Men's Madison
 1915371,Men's Team Pursuit
 1915378,Jumping Individual
 1915378,Jumping Team
@@ -7155,7 +7249,6 @@ code,events
 1918009,Men
 1918011,Men
 1918012,Men
-1918038,Men's Road Race
 1918063,Women
 1918067,Women
 1918071,Men
@@ -7332,7 +7425,6 @@ code,events
 1918934,Men's 4 x 100m Relay
 1918936,Men's 4 x 100m Relay
 1918943,Men's 100m
-1918943,Men's 200m
 1918943,Men's 4 x 100m Relay
 1918954,Men's 4 x 100m Relay
 1918961,Men's 4 x 100m Relay
@@ -7462,7 +7554,9 @@ code,events
 1919551,25m Rapid Fire Pistol Men
 1919555,10m Air Rifle Men
 1919558,Skeet Women
+1919558,Skeet Mixed Team
 1919561,Skeet Men
+1919561,Skeet Mixed Team
 1919616,Men
 1919628,Women
 1919675,Men -58kg
@@ -7482,7 +7576,6 @@ code,events
 1919827,Women's Long Jump
 1919832,Men's 100m
 1919832,Men's 4 x 100m Relay
-1919840,Women's Marathon
 1919847,Men's 200m
 1919850,Men's 20km Race Walk
 1919880,Men's 110m Hurdles
@@ -7511,11 +7604,14 @@ code,events
 1920065,Men's Marathon
 1920081,Men's 400m Hurdles
 1920082,Men's 400m Hurdles
+1920082,Men's 4 x 400m Relay
 1920083,Men's 4 x 100m Relay
 1920085,Men's 4 x 100m Relay
 1920092,Men's 400m
 1920092,Men's 4 x 400m Relay
+1920092,4 x 400m Relay Mixed
 1920096,Women's 4 x 100m Relay
+1920102,Women's 4 x 400m Relay
 1920102,4 x 400m Relay Mixed
 1920110,Men's 1500m
 1920111,Women's 20km Race Walk
@@ -7547,6 +7643,7 @@ code,events
 1920164,Women's 4 x 100m Relay
 1920167,Women's Shot Put
 1920169,Women's 4 x 100m Relay
+1920170,Women's 4 x 400m Relay
 1920170,4 x 400m Relay Mixed
 1920174,Women's 3000m Steeplechase
 1920175,Women's Long Jump
@@ -7560,7 +7657,7 @@ code,events
 1920195,Men's Discus Throw
 1920197,Women's Discus Throw
 1920202,Men's Marathon
-1920203,Women's Shot Put
+1920206,Men's 4 x 400m Relay
 1920206,4 x 400m Relay Mixed
 1920207,Women's Heptathlon
 1920211,Men's 3000m Steeplechase
@@ -7569,23 +7666,22 @@ code,events
 1920234,Men's 4 x 400m Relay
 1920236,Men's Javelin Throw
 1920238,Women's 1500m
-1920239,Women's 4 x 100m Relay
+1920244,Men's 4 x 100m Relay
 1920244,4 x 400m Relay Mixed
 1920246,Men's Pole Vault
-1920247,Men's Marathon
 1920249,Women's Marathon
 1920252,Men's 4 x 100m Relay
 1920254,Men's 4 x 400m Relay
 1920258,Men's 3000m Steeplechase
 1920259,Men's Marathon
 1920269,Women's 4 x 400m Relay
-1920272,Women's 4 x 400m Relay
 1920276,Women's 3000m Steeplechase
 1920277,Marathon Race Walk Relay Mixed
 1920289,Women's Heptathlon
 1920290,4 x 400m Relay Mixed
 1920295,Women's 4 x 400m Relay
 1920296,Women's 4 x 400m Relay
+1920296,4 x 400m Relay Mixed
 1920297,Women's High Jump
 1920299,Women's Long Jump
 1920301,Men's Pole Vault
@@ -7596,7 +7692,6 @@ code,events
 1920326,Men's Javelin Throw
 1920334,Women's Long Jump
 1920339,Men's Discus Throw
-1920344,Women's Marathon
 1920345,Men's 4 x 100m Relay
 1920348,Women's Marathon
 1920355,Men's 100m
@@ -7638,7 +7733,6 @@ code,events
 1920707,Lightweight Women's Double Sculls
 1920708,Men's Single Sculls
 1920729,Women's Hammer Throw
-1920740,Marathon Race Walk Relay Mixed
 1920753,Men's Freestyle 86kg
 1920760,Women's Freestyle 76kg
 1920805,Men's 200m
@@ -7653,7 +7747,6 @@ code,events
 1920840,Men's Pole Vault
 1920843,Men's High Jump
 1920849,Women's Triple Jump
-1920853,Women's Pole Vault
 1920857,Women's Pole Vault
 1921032,Men's Freestyle 125kg
 1921046,Men
@@ -7677,7 +7770,6 @@ code,events
 1921367,Men
 1921489,Men's Single Sculls
 1921490,Men's Pair
-1921512,Women's Marathon
 1921529,Men's 3000m Steeplechase
 1921537,Women's Triple Jump
 1921538,Marathon Race Walk Relay Mixed
@@ -7722,6 +7814,7 @@ code,events
 1921797,Men's 400m Hurdles
 1921812,Women's Javelin Throw
 1921818,Men's 200m
+1921818,Men's 4 x 100m Relay
 1921833,Men's 200m
 1921865,Women's 5000m
 1921878,Men's 4 x 100m Relay
@@ -7835,17 +7928,18 @@ code,events
 1924300,Men's Épée Team
 1924383,Women's 400m
 1924383,Women's 4 x 400m Relay
+1924383,4 x 400m Relay Mixed
 1924384,Women's 100m
 1924384,Women's 200m
 1924384,Women's 4 x 100m Relay
 1924385,Men's 5000m
 1924392,Women's 3000m Steeplechase
 1924395,Women's Pole Vault
-1924398,Women's 1500m
 1924399,Men's 800m
 1924401,Men's Marathon
 1924403,Women's Pole Vault
 1924404,Men's 400m Hurdles
+1924406,Men's 4 x 400m Relay
 1924406,4 x 400m Relay Mixed
 1924408,Men's 5000m
 1924409,Men's 400m
@@ -7857,6 +7951,7 @@ code,events
 1924422,Men's 1500m
 1924425,Women's Marathon
 1924426,Men's 4 x 400m Relay
+1924426,4 x 400m Relay Mixed
 1924429,Women's 800m
 1924430,Men's 400m
 1924430,Men's 4 x 400m Relay
@@ -7884,27 +7979,28 @@ code,events
 1924460,Women's 200m
 1924460,Women's 4 x 100m Relay
 1924463,Women's 400m Hurdles
+1924463,Women's 4 x 400m Relay
 1924464,Women's 400m
 1924464,Women's 4 x 400m Relay
+1924464,4 x 400m Relay Mixed
 1924467,Women's Heptathlon
 1924470,Women's 400m
 1924470,Women's 4 x 400m Relay
 1924471,Men's 110m Hurdles
 1924472,Men's Discus Throw
 1924474,Men's Discus Throw
-1924475,Women's 4 x 100m Relay
-1924476,Women's 400m
-1924476,Women's 4 x 400m Relay
 1924478,Women's 3000m Steeplechase
-1924479,Men's 100m
 1924483,Women's 800m
 1924486,Men's 800m
 1924494,Women's Marathon
 1924499,Women's 1500m
 1924505,Men's 20km Race Walk
+1924506,Women's 4 x 400m Relay
 1924506,4 x 400m Relay Mixed
 1924507,Women's 200m
+1924507,Women's 4 x 100m Relay
 1924509,Women's 4 x 400m Relay
+1924509,4 x 400m Relay Mixed
 1924559,B-Girls
 1924576,Men's Épée Individual
 1924576,Men's Épée Team
@@ -7955,14 +8051,18 @@ code,events
 1925121,Men's 100m Freestyle
 1925121,Men's 50m Freestyle
 1925123,Women's 4 x 100m Freestyle Relay
+1925123,Women's 4 x 100m Medley Relay
 1925123,Relay Only Athlete
 1925124,Women's 4 x 100m Freestyle Relay
 1925124,Relay Only Athlete
 1925125,Women's 100m Freestyle
 1925125,Women's 200m Freestyle
+1925125,Women's 4 x 100m Medley Relay
 1925126,Women's 4 x 100m Freestyle Relay
+1925126,Women's 4 x 100m Medley Relay
 1925126,Relay Only Athlete
 1925129,Women's 4 x 100m Freestyle Relay
+1925129,Women's 4 x 100m Medley Relay
 1925129,Relay Only Athlete
 1925130,Women's 100m Backstroke
 1925130,Women's 200m Backstroke
@@ -8009,18 +8109,22 @@ code,events
 1925632,Women's 1500m Freestyle
 1925632,Women's 800m Freestyle
 1925633,Men's 100m Breaststroke
+1925633,Men's 4 x 100m Medley Relay
 1925633,Mixed 4 x 100m Medley Relay
 1925634,Men's 4 x 100m Freestyle Relay
 1925634,Relay Only Athlete
 1925635,Men's 100m Backstroke
 1925635,Men's 200m Backstroke
 1925635,Men's 4 x 100m Freestyle Relay
+1925635,Men's 4 x 100m Medley Relay
 1925636,Men's 100m Freestyle
 1925636,Men's 4 x 100m Freestyle Relay
+1925636,Men's 4 x 100m Medley Relay
 1925637,Men's 200m Butterfly
 1925637,Men's 200m Individual Medley
 1925637,Men's 400m Individual Medley
 1925638,Women's 100m Breaststroke
+1925638,Women's 4 x 100m Medley Relay
 1925639,Women's 10m Platform
 1925640,Women's 10m Platform
 1925641,Women's 3m Springboard
@@ -8050,6 +8154,7 @@ code,events
 1925669,Men's 4 x 100m Freestyle Relay
 1925669,Men's 50m Freestyle
 1925671,Men's 200m Butterfly
+1925671,Men's 4 x 100m Medley Relay
 1925675,Men's 4 x 100m Freestyle Relay
 1925675,Relay Only Athlete
 1925677,Men's 1500m Freestyle
@@ -8104,13 +8209,16 @@ code,events
 1925790,Women's 4 x 100m Freestyle Relay
 1925790,Relay Only Athlete
 1925791,Women's 4 x 100m Freestyle Relay
+1925791,Women's 4 x 100m Medley Relay
 1925791,Women's 4 x 200m Freestyle Relay
 1925791,Relay Only Athlete
 1925791,Mixed 4 x 100m Medley Relay
 1925793,Women's 200m Backstroke
+1925793,Women's 4 x 100m Medley Relay
 1925795,Women's 4 x 200m Freestyle Relay
 1925795,Relay Only Athlete
 1925797,Women's 100m Butterfly
+1925797,Women's 4 x 100m Medley Relay
 1925798,Women's 4 x 100m Freestyle Relay
 1925798,Relay Only Athlete
 1925803,Women's 4 x 200m Freestyle Relay
@@ -8157,7 +8265,6 @@ code,events
 1926101,Women's 400m Hurdles
 1926102,Women's 3000m Steeplechase
 1926104,Women's Marathon
-1926108,Women's Marathon
 1926111,Women's Marathon
 1926127,"Men's 10,000m"
 1926127,Men's 5000m
@@ -8165,7 +8272,6 @@ code,events
 1926201,Men's Shot Put
 1926205,Women's Discus Throw
 1926236,Women's Long Jump
-1926269,"Women's 10,000m"
 1926293,Men's Singles
 1926294,Men's Singles
 1926295,Women's Doubles
@@ -8432,6 +8538,7 @@ code,events
 1927672,Mixed Dinghy
 1927673,Eventing Individual
 1927675,Women's 20km Race Walk
+1927675,Marathon Race Walk Relay Mixed
 1927679,Eventing Individual
 1927680,Men's Windsurfing
 1927685,Men's 100m Butterfly
@@ -8449,7 +8556,6 @@ code,events
 1927719,Women's Doubles
 1927719,Women's Singles
 1927719,Mixed Doubles
-1927720,Marathon Race Walk Relay Mixed
 1927733,Women's Windsurfing
 1927771,Women's Kite
 1927782,Women's Dinghy
@@ -8512,6 +8618,7 @@ code,events
 1928281,Men's Madison
 1928281,Men's Omnium
 1928283,Men's Madison
+1928283,Men's Omnium
 1928287,Men's Cross-country
 1928292,Men's Cross-country
 1928408,Women
@@ -8538,12 +8645,12 @@ code,events
 1928529,Men's Quadruple Sculls
 1928530,Men's Quadruple Sculls
 1928533,Men's 4 x 400m Relay
+1928533,4 x 400m Relay Mixed
 1928538,Women's 49kg
 1928547,Women's Single Sculls
 1928551,Men's Quadruple Sculls
 1928566,Women
 1928574,Men's 200m
-1928582,Marathon Race Walk Relay Mixed
 1928585,Women's +81kg
 1928778,Men's 100m Freestyle
 1928782,Men's Hammer Throw
@@ -8564,6 +8671,7 @@ code,events
 1928902,Women's 200m Freestyle
 1928906,Women -70 kg
 1928916,Women's 400m
+1928916,4 x 400m Relay Mixed
 1928919,Men's 100m Breaststroke
 1928919,Men's 200m Breaststroke
 1929156,Skeet Men
@@ -8575,12 +8683,12 @@ code,events
 1929225,Men's 50m Freestyle
 1929226,Men
 1929228,Men's 400m Hurdles
+1929228,Men's 4 x 400m Relay
 1929250,Men's 4 x 100m Relay
 1929297,Women's 50m Freestyle
 1929428,Men's 400m
 1929428,Men's 4 x 400m Relay
 1929433,Women -48 kg
-1929550,Men's 5000m
 1929606,Women's 50m Freestyle
 1929613,Individual All-Around
 1929616,Men's Épée Individual
@@ -8635,7 +8743,6 @@ code,events
 1930161,Women
 1930214,Skeet Women
 1930226,Women's Freestyle 50kg
-1930227,"Women's 10,000m"
 1930231,Men's Greco-Roman 77kg
 1930234,Men's 100m
 1930235,Men
@@ -8690,8 +8797,10 @@ code,events
 1930468,10m Air Pistol Women
 1930468,10m Air Pistol Mixed Team
 1930478,Skeet Women
+1930478,Skeet Mixed Team
 1930479,Trap Women
 1930486,Skeet Men
+1930486,Skeet Mixed Team
 1930532,Men
 1930539,Men's 100m Breaststroke
 1930552,Men's Sabre Individual
@@ -8764,6 +8873,7 @@ code,events
 1931384,Women's Marathon
 1931493,Men's Dinghy
 1931496,Men's Freestyle 57kg
+1931500,Men
 1931570,Men's Individual
 1931570,Men's Team
 1931572,Men's Individual
@@ -8782,7 +8892,6 @@ code,events
 1931583,Women's Individual
 1931584,Men's 57kg
 1931588,Men's Individual
-1931623,Women's 1500m
 1931815,Women's Singles
 1931818,Men
 1931829,Men
@@ -8832,14 +8941,13 @@ code,events
 1932600,Skeet Men
 1932622,Men -81 kg
 1932649,Men's Individual
-1932656,Jumping Individual
-1932656,Jumping Team
 1932660,Women's 50m Freestyle
 1932666,Jumping Individual
 1932666,Jumping Team
 1932686,Jumping Individual
 1932686,Jumping Team
 1932735,Men's 200m Backstroke
+1932740,Jumping Individual
 1932740,Jumping Team
 1932757,Women's Individual
 1932764,Men's Foil Individual
@@ -8857,7 +8965,6 @@ code,events
 1932863,Women's Individual
 1932872,Women's Marathon
 1932880,Men's Individual
-1932882,Women's Marathon
 1932887,Men's 4 x 100m Relay
 1932890,Mixed Dinghy
 1932891,Mixed Dinghy
@@ -8878,7 +8985,6 @@ code,events
 1933100,Women's Shot Put
 1933118,Women's Shot Put
 1933133,Men
-1933137,Men's 100m
 1933137,Men's 4 x 100m Relay
 1933138,Women's Individual
 1933159,10m Air Pistol Women
@@ -8897,7 +9003,6 @@ code,events
 1933193,10m Air Rifle Mixed Team
 1933244,Men
 1933249,Men's Hammer Throw
-1933250,Men's Marathon
 1933257,Men's Hammer Throw
 1933275,Men's Discus Throw
 1933287,Women
@@ -8945,6 +9050,7 @@ code,events
 1933817,Men's Madison
 1933819,Women's Omnium
 1933821,Men's Madison
+1933821,Men's Omnium
 1933823,Women's Cross-country
 1933998,Women's 200m
 1934027,Men
@@ -8976,6 +9082,7 @@ code,events
 1934312,Men
 1934313,Men
 1934315,Men
+1934316,Men
 1934317,Men
 1934318,Men
 1934323,Men
@@ -9190,10 +9297,13 @@ code,events
 1935860,Mixed 4 x 100m Medley Relay
 1935869,Men's 100m Freestyle
 1935869,Men's 4 x 100m Freestyle Relay
+1935869,Men's 4 x 100m Medley Relay
 1935871,Men's 100m Backstroke
 1935871,Men's 4 x 100m Freestyle Relay
+1935871,Men's 4 x 100m Medley Relay
 1935872,Women's 200m Backstroke
 1935873,Women's 100m Backstroke
+1935873,Women's 4 x 100m Medley Relay
 1935879,Women's 4 x 100m Freestyle Relay
 1935879,Relay Only Athlete
 1935882,Men's 200m Individual Medley
@@ -9203,12 +9313,16 @@ code,events
 1935895,Women's 200m Breaststroke
 1935895,Women's 200m Individual Medley
 1935895,Women's 4 x 100m Freestyle Relay
+1935895,Women's 4 x 100m Medley Relay
 1935896,Men's 100m Butterfly
 1935896,Men's 4 x 100m Freestyle Relay
+1935896,Men's 4 x 100m Medley Relay
 1935896,Men's 50m Freestyle
 1935896,Mixed 4 x 100m Medley Relay
 1935900,Men's 200m Breaststroke
 1935901,Men's 100m Breaststroke
+1935901,Men's 4 x 100m Medley Relay
+1935901,Mixed 4 x 100m Medley Relay
 1935902,Men's 1500m Freestyle
 1935902,Men's 800m Freestyle
 1935903,Men's 200m Individual Medley
@@ -9226,6 +9340,7 @@ code,events
 1935911,Men's 50m Freestyle
 1935915,Men's 100m Butterfly
 1935915,Men's 200m Butterfly
+1935915,Men's 4 x 100m Medley Relay
 1935916,Men's 4 x 100m Freestyle Relay
 1935916,Relay Only Athlete
 1935918,Men's 200m Freestyle
@@ -9233,7 +9348,8 @@ code,events
 1935923,Women's 100m Butterfly
 1935923,Women's 100m Freestyle
 1935923,Women's 4 x 100m Freestyle Relay
-1935927,Men's 10km
+1935923,Women's 4 x 100m Medley Relay
+1935923,Mixed 4 x 100m Medley Relay
 1935927,Men's 1500m Freestyle
 1935928,Men's 200m Backstroke
 1935929,Men's 400m Individual Medley
@@ -9241,6 +9357,7 @@ code,events
 1935931,Relay Only Athlete
 1935932,Women's 100m Breaststroke
 1935932,Women's 200m Breaststroke
+1935932,Women's 4 x 100m Medley Relay
 1935933,Men's 4 x 100m Freestyle Relay
 1935933,Relay Only Athlete
 1935938,Women's 1500m Freestyle
@@ -9256,6 +9373,8 @@ code,events
 1935947,Men's 200m Breaststroke
 1935957,Men's 100m Backstroke
 1935957,Men's 200m Backstroke
+1935957,Men's 4 x 100m Medley Relay
+1935957,Mixed 4 x 100m Medley Relay
 1935967,Women's 4 x 200m Freestyle Relay
 1935967,Relay Only Athlete
 1935968,Men's 4 x 200m Freestyle Relay
@@ -9263,22 +9382,28 @@ code,events
 1935972,Men's 10km
 1935978,Men's 400m Freestyle
 1935979,Women's 200m Butterfly
+1935979,Women's 4 x 100m Medley Relay
 1935979,Women's 4 x 200m Freestyle Relay
 1935982,Men's 400m Freestyle
 1935982,Men's 4 x 200m Freestyle Relay
 1935984,Women's 100m Backstroke
 1935984,Women's 200m Backstroke
 1935984,Women's 200m Butterfly
+1935984,Women's 4 x 100m Medley Relay
 1935984,Mixed 4 x 100m Medley Relay
 1935992,Men's 100m Breaststroke
+1935992,Men's 4 x 100m Medley Relay
 1935992,Mixed 4 x 100m Medley Relay
 1935996,Men's 200m Butterfly
 1935997,Women's 200m Individual Medley
 1935998,Women's 100m Butterfly
 1935998,Women's 100m Freestyle
 1935998,Women's 4 x 100m Freestyle Relay
+1935998,Women's 4 x 100m Medley Relay
 1935998,Women's 50m Freestyle
+1935998,Mixed 4 x 100m Medley Relay
 1935999,Women's 100m Breaststroke
+1935999,Women's 4 x 100m Medley Relay
 1936000,Women's 200m Freestyle
 1936000,Women's 4 x 200m Freestyle Relay
 1936001,Women's 400m Individual Medley
@@ -9295,7 +9420,6 @@ code,events
 1936309,Men's 100m
 1936310,Men -68kg
 1936316,Men +80kg
-1936337,Women's 1500m
 1936400,Men's 61kg
 1936402,Men's 4 x 400m Relay
 1936413,Men's Singles
@@ -9362,6 +9486,7 @@ code,events
 1936972,Mixed Team
 1936983,Men's 100m
 1936983,Men's 200m
+1936983,Men's 4 x 400m Relay
 1936993,Women's Individual
 1937011,Men's Greco-Roman 87kg
 1937023,Women's High Jump
@@ -9454,9 +9579,10 @@ code,events
 1938644,Women's Shot Put
 1938646,Men's 4 x 400m Relay
 1938655,Skeet Men
+1938655,Skeet Mixed Team
 1938662,Skeet Women
+1938662,Skeet Mixed Team
 1938665,Men's 4 x 400m Relay
-1938712,Men's 400m
 1938716,Women's Long Jump
 1938717,Women's 20km Race Walk
 1938735,Women's 400m
@@ -9533,6 +9659,7 @@ code,events
 1939734,Women's 4 x 100m Relay
 1939737,Women's Long Jump
 1939738,Men's 200m
+1939738,Men's 4 x 100m Relay
 1939739,Men's Javelin Throw
 1939741,Women's Heptathlon
 1939742,Women's 3000m Steeplechase
@@ -9572,7 +9699,6 @@ code,events
 1939815,Men's Marathon
 1939816,Men's Long Jump
 1939817,Women's 1500m
-1939818,Women's Marathon
 1939819,Women's 100m Hurdles
 1939821,Women's Javelin Throw
 1939823,Men's 3000m Steeplechase
@@ -9604,6 +9730,7 @@ code,events
 1939862,Women's Discus Throw
 1939864,Men's 110m Hurdles
 1939870,Women's 200m
+1939870,Women's 4 x 100m Relay
 1939871,Marathon Race Walk Relay Mixed
 1939872,Men's High Jump
 1939873,Men's Decathlon
@@ -9720,7 +9847,6 @@ code,events
 1940250,Women's Omnium
 1940250,Women's Team Pursuit
 1940252,Women's Keirin
-1940252,Women's Madison
 1940252,Women's Team Pursuit
 1940252,Women's Sprint
 1940253,Men's Team Pursuit
@@ -9736,6 +9862,7 @@ code,events
 1940260,Men's Sprint
 1940260,Men's Team Sprint
 1940261,Women's Keirin
+1940261,Women's Madison
 1940261,Women's Team Pursuit
 1940261,Women's Sprint
 1940262,Men's Keirin
@@ -9744,6 +9871,7 @@ code,events
 1940263,Men's Keirin
 1940263,Men's Sprint
 1940263,Men's Team Sprint
+1940263,Women's Keirin
 1940264,Men's Madison
 1940264,Men's Omnium
 1940264,Men's Team Pursuit
@@ -9899,7 +10027,6 @@ code,events
 1941502,Men's Singles
 1941505,Men's Singles
 1941516,Men's Freestyle 97kg
-1941528,Jumping Individual
 1941544,Dressage Individual
 1941544,Dressage Team
 1941546,Jumping Individual
@@ -10141,6 +10268,7 @@ code,events
 1944077,Women
 1944078,Women's Keirin
 1944078,Women's Sprint
+1944085,Women
 1944086,Men
 1944092,Men's Freestyle 97kg
 1944095,Women's 100m Backstroke
@@ -10166,6 +10294,7 @@ code,events
 1944325,25m Pistol Women
 1944327,25m Rapid Fire Pistol Men
 1944354,Skeet Men
+1944354,Skeet Mixed Team
 1944356,Trap Men
 1944363,10m Air Rifle Men
 1944363,50m Rifle 3 Positions Men
@@ -10179,15 +10308,18 @@ code,events
 1944377,Trap Men
 1944384,Trap Women
 1944385,Skeet Men
+1944385,Skeet Mixed Team
 1944388,10m Air Rifle Men
 1944388,50m Rifle 3 Positions Men
 1944388,10m Air Rifle Mixed Team
 1944397,Skeet Women
+1944397,Skeet Mixed Team
 1944406,Trap Women
 1944407,10m Air Rifle Women
 1944407,50m Rifle 3 Positions Women
 1944407,10m Air Rifle Mixed Team
 1944408,Skeet Women
+1944408,Skeet Mixed Team
 1944415,Women's Dinghy
 1944435,Women's Windsurfing
 1944598,Men's 100m
@@ -10315,14 +10447,19 @@ code,events
 1945125,Women's 100m Butterfly
 1945125,Women's 200m Butterfly
 1945125,Women's 4 x 100m Freestyle Relay
+1945125,Women's 4 x 100m Medley Relay
 1945125,Women's 50m Freestyle
 1945125,Mixed 4 x 100m Medley Relay
 1945127,Men's 100m Butterfly
 1945127,Men's 100m Breaststroke
+1945127,Men's 4 x 100m Medley Relay
 1945128,Men's 100m Breaststroke
 1945128,Men's 200m Breaststroke
+1945128,Men's 4 x 100m Medley Relay
+1945128,Mixed 4 x 100m Medley Relay
 1945132,Men's 100m Backstroke
 1945132,Men's 200m Backstroke
+1945132,Men's 4 x 100m Medley Relay
 1945132,Mixed 4 x 100m Medley Relay
 1945134,Men's 100m Freestyle
 1945134,Men's 4 x 100m Freestyle Relay
@@ -10341,21 +10478,27 @@ code,events
 1945148,Men's 100m Freestyle
 1945148,Men's 200m Freestyle
 1945148,Men's 4 x 100m Freestyle Relay
+1945148,Men's 4 x 100m Medley Relay
 1945148,Men's 4 x 200m Freestyle Relay
 1945148,Mixed 4 x 100m Medley Relay
 1945149,Men's 100m Butterfly
+1945149,Men's 4 x 100m Medley Relay
 1945150,Men's 1500m Freestyle
 1945150,Men's 400m Freestyle
 1945150,Men's 4 x 200m Freestyle Relay
 1945150,Men's 800m Freestyle
 1945157,Women's 100m Backstroke
+1945157,Women's 4 x 100m Medley Relay
 1945159,Women's 100m Freestyle
 1945159,Women's 200m Freestyle
 1945159,Women's 4 x 100m Freestyle Relay
+1945159,Women's 4 x 100m Medley Relay
 1945159,Women's 4 x 200m Freestyle Relay
+1945159,Mixed 4 x 100m Medley Relay
 1945161,Women's 1500m Freestyle
 1945164,Women's 200m Individual Medley
 1945164,Women's 4 x 100m Freestyle Relay
+1945164,Women's 4 x 100m Medley Relay
 1945166,Women's 200m Backstroke
 1945169,Women's 1500m Freestyle
 1945169,Women's 200m Freestyle
@@ -10366,11 +10509,14 @@ code,events
 1945171,Relay Only Athlete
 1945186,Men's 200m Individual Medley
 1945200,Women's 100m Breaststroke
+1945200,Women's 4 x 100m Medley Relay
 1945200,Mixed 4 x 100m Medley Relay
 1945201,Women's 100m Breaststroke
 1945202,Women's 100m Backstroke
+1945202,Women's 4 x 100m Medley Relay
 1945206,Women's 100m Freestyle
 1945206,Women's 4 x 100m Freestyle Relay
+1945206,Women's 4 x 100m Medley Relay
 1945206,Women's 50m Freestyle
 1945208,Women's 200m Butterfly
 1945214,Women's 200m Breaststroke
@@ -10487,6 +10633,7 @@ code,events
 1945692,Men's Pair
 1945693,Men's Eight
 1945694,Women's Single Sculls
+1945695,Men's Eight
 1945695,Men's Four
 1945701,Women's Individual Stroke Play
 1945736,Men's Team Pursuit
@@ -10509,7 +10656,6 @@ code,events
 1945744,Men's Team Pursuit
 1945744,Men's Sprint
 1945744,Men's Team Sprint
-1945745,Men's Team Sprint
 1945746,Men's Keirin
 1945746,Men's Sprint
 1945746,Men's Team Sprint
@@ -10589,11 +10735,13 @@ code,events
 1946137,Women
 1946143,Women's 200m Butterfly
 1946146,Women's 100m Butterfly
+1946146,Women's 4 x 100m Medley Relay
 1946150,Women's 200m Freestyle
 1946150,Women's 400m Freestyle
 1946150,Women's 4 x 200m Freestyle Relay
 1946150,Women's 800m Freestyle
 1946153,Men's 100m Butterfly
+1946153,Men's 4 x 100m Medley Relay
 1946153,Men's 50m Freestyle
 1946155,Men's 100m Backstroke
 1946155,Men's 200m Backstroke
@@ -10610,15 +10758,19 @@ code,events
 1946174,Women's 200m Breaststroke
 1946174,Women's 200m Individual Medley
 1946174,Women's 400m Individual Medley
+1946174,Women's 4 x 100m Medley Relay
 1946177,Women's 100m Butterfly
 1946177,Women's 4 x 100m Freestyle Relay
+1946177,Women's 4 x 100m Medley Relay
 1946177,Mixed 4 x 100m Medley Relay
 1946179,Men's 4 x 100m Freestyle Relay
 1946179,Men's 4 x 200m Freestyle Relay
 1946179,Relay Only Athlete
 1946183,Women's 100m Backstroke
+1946183,Women's 4 x 100m Medley Relay
 1946183,Mixed 4 x 100m Medley Relay
 1946184,Men's 100m Backstroke
+1946184,Men's 4 x 100m Medley Relay
 1946185,Men's 200m Breaststroke
 1946185,Mixed 4 x 100m Medley Relay
 1946186,Men's 4 x 100m Freestyle Relay
@@ -10629,30 +10781,41 @@ code,events
 1946189,Women's 400m Individual Medley
 1946190,Women's 100m Breaststroke
 1946190,Women's 200m Breaststroke
+1946190,Women's 4 x 100m Medley Relay
 1946195,Men's 100m Breaststroke
 1946195,Men's 200m Breaststroke
+1946195,Men's 4 x 100m Medley Relay
+1946195,Mixed 4 x 100m Medley Relay
 1946196,Men's 4 x 100m Freestyle Relay
 1946196,Men's 4 x 200m Freestyle Relay
 1946196,Relay Only Athlete
 1946198,Women's 100m Backstroke
 1946198,Women's 200m Backstroke
 1946198,Women's 200m Individual Medley
+1946198,Women's 4 x 100m Medley Relay
+1946198,Mixed 4 x 100m Medley Relay
 1946200,Men's 100m Freestyle
 1946200,Men's 4 x 100m Freestyle Relay
+1946200,Men's 4 x 100m Medley Relay
 1946200,Mixed 4 x 100m Medley Relay
 1946201,Women's 1500m Freestyle
 1946201,Women's 4 x 200m Freestyle Relay
 1946201,Women's 800m Freestyle
 1946209,Men's 100m Butterfly
 1946209,Men's 200m Butterfly
+1946209,Men's 4 x 100m Medley Relay
+1946209,Mixed 4 x 100m Medley Relay
 1946211,Men's 200m Freestyle
 1946211,Men's 4 x 200m Freestyle Relay
 1946212,Women's 4 x 100m Freestyle Relay
+1946212,Women's 4 x 100m Medley Relay
 1946212,Women's 50m Freestyle
 1946218,Women's 100m Freestyle
 1946218,Women's 200m Freestyle
 1946218,Women's 4 x 100m Freestyle Relay
+1946218,Women's 4 x 100m Medley Relay
 1946218,Women's 4 x 200m Freestyle Relay
+1946218,Mixed 4 x 100m Medley Relay
 1946221,Women's 4 x 100m Freestyle Relay
 1946221,Relay Only Athlete
 1946223,Men's 1500m Freestyle
@@ -10806,6 +10969,7 @@ code,events
 1947747,Men's Freestyle 86kg
 1947761,Women -70 kg
 1947761,Mixed Team
+1947771,Men's 4 x 400m Relay
 1947771,4 x 400m Relay Mixed
 1947874,Men
 1947879,Women's 57kg
@@ -11243,7 +11407,6 @@ code,events
 1952058,Men's 20km Race Walk
 1952058,Marathon Race Walk Relay Mixed
 1952072,Men's 20km Race Walk
-1952077,Men's 400m
 1952077,Men's 400m Hurdles
 1952077,Men's 4 x 400m Relay
 1952123,Men's 100m
@@ -11411,11 +11574,8 @@ code,events
 1953817,Women -52 kg
 1953817,Mixed Team
 1953819,Men -60 kg
-1953819,Mixed Team
 1953822,Women -78 kg
-1953822,Mixed Team
 1953827,Women -48 kg
-1953827,Mixed Team
 1953832,Men -90 kg
 1953832,Mixed Team
 1953835,Women -57 kg
@@ -11529,8 +11689,8 @@ code,events
 1954397,Mixed 4 x 100m Medley Relay
 1954535,Women's Singles
 1954535,Women's Team
+1954537,Women's Team
 1954539,Women's Singles
-1954539,Women's Team
 1954540,Women's Team
 1954543,Men's Singles
 1954552,Duet
@@ -11653,11 +11813,13 @@ code,events
 1954826,Men's 4 x 100m Freestyle Relay
 1954826,Men's 4 x 200m Freestyle Relay
 1954826,Relay Only Athlete
+1954827,Men's 4 x 100m Medley Relay
 1954827,Relay Only Athlete
 1954829,Women's 4 x 200m Freestyle Relay
 1954829,Relay Only Athlete
 1954830,Men's 100m Freestyle
 1954830,Men's 4 x 100m Freestyle Relay
+1954830,Men's 4 x 100m Medley Relay
 1954831,Men's 4 x 100m Freestyle Relay
 1954831,Men's 4 x 200m Freestyle Relay
 1954831,Relay Only Athlete
@@ -11669,6 +11831,7 @@ code,events
 1954838,Men's 100m Backstroke
 1954838,Men's 200m Backstroke
 1954838,Men's 200m Individual Medley
+1954838,Men's 4 x 100m Medley Relay
 1954840,Women's 4 x 200m Freestyle Relay
 1954840,Relay Only Athlete
 1954841,Men's 4 x 200m Freestyle Relay
@@ -11677,6 +11840,7 @@ code,events
 1954842,Relay Only Athlete
 1954849,Men's 100m Butterfly
 1954849,Men's 4 x 100m Freestyle Relay
+1954849,Men's 4 x 100m Medley Relay
 1954863,Women's 100m Breaststroke
 1954863,Women's 200m Breaststroke
 1954865,Women's 100m Backstroke
@@ -11757,6 +11921,7 @@ code,events
 1955106,Women's Team Pursuit
 1955107,Women
 1955108,Women's Madison
+1955108,Women's Omnium
 1955108,Women's Team Pursuit
 1955109,Women
 1955110,Men
@@ -11902,6 +12067,7 @@ code,events
 1956237,Men's 1500m
 1956267,Women's 400m
 1956267,Women's 4 x 400m Relay
+1956267,4 x 400m Relay Mixed
 1956287,Women -57kg
 1956306,Women's Singles
 1956347,10m Air Pistol Women
@@ -11930,6 +12096,7 @@ code,events
 1956465,Men
 1956466,Men
 1956469,Men's 100m Breaststroke
+1956469,Men's 4 x 100m Medley Relay
 1956479,Women's 54kg
 1956490,Women's Single Sculls
 1956493,Men's Double Sculls
@@ -11944,7 +12111,6 @@ code,events
 1956572,Men's Freestyle 74kg
 1956575,Men's Greco-Roman 97kg
 1956577,Men's Greco-Roman 87kg
-1956579,Men's Freestyle 57kg
 1956583,Men's Greco-Roman 67kg
 1956585,Men's Greco-Roman 60kg
 1956604,Men's 400m Hurdles
@@ -11959,11 +12125,11 @@ code,events
 1956843,Women's 4 x 100m Relay
 1956844,4 x 400m Relay Mixed
 1956845,"Women's 10,000m"
+1956846,Women's 4 x 400m Relay
 1956846,4 x 400m Relay Mixed
 1956848,Men's Marathon
-1956852,Women's Marathon
 1956853,Men's 4 x 400m Relay
-1956856,Men's 5000m
+1956853,4 x 400m Relay Mixed
 1956857,Women's 100m Hurdles
 1956858,Men's Marathon
 1956886,Men's 100m Freestyle
@@ -11975,8 +12141,6 @@ code,events
 1957037,Men -100 kg
 1957052,Women's 800m
 1957067,Men
-1957081,Men's Road Race
-1957081,Men's Madison
 1957081,Men's Omnium
 1957081,Men's Team Pursuit
 1957082,Women's Keirin
@@ -12100,8 +12264,6 @@ code,events
 1959450,Men's 4 x 100m Relay
 1959452,4 x 400m Relay Mixed
 1959486,Skeet Men
-1959571,"Women's 10,000m"
-1959571,Women's Marathon
 1959716,Men's Javelin Throw
 1959778,Men
 1959781,Men
@@ -12195,6 +12357,8 @@ code,events
 1960005,Women
 1960006,Women
 1960008,Women
+1960015,Women
+1960019,Women
 1960030,Women
 1960038,Women
 1960046,Women
@@ -12202,14 +12366,11 @@ code,events
 1960058,Women
 1960064,Women
 1960065,Women
-1960111,Men's 400m
 1960111,Men's 4 x 400m Relay
+1960111,4 x 400m Relay Mixed
 1960115,Women's 4 x 100m Relay
 1960118,Men's 5000m
-1960125,Men's 100m
-1960125,Men's 200m
 1960125,Men's 4 x 100m Relay
-1960131,Men's 110m Hurdles
 1960137,Women's 1500m
 1960143,Women's 1500m
 1960145,Women's 1500m
@@ -12220,19 +12381,16 @@ code,events
 1960161,Women's 5000m
 1960162,4 x 400m Relay Mixed
 1960169,Women's 100m Hurdles
-1960171,Women's 100m Hurdles
 1960173,Men's 100m
 1960173,Men's 200m
 1960173,Men's 4 x 100m Relay
 1960177,Men's 400m
 1960177,Men's 4 x 400m Relay
 1960178,Men's Pole Vault
-1960179,Women's 400m Hurdles
+1960179,Women's 4 x 400m Relay
 1960179,4 x 400m Relay Mixed
 1960181,Women's 100m
-1960181,Women's 200m
 1960181,Women's 4 x 100m Relay
-1960186,Men's Triple Jump
 1960187,"Men's 10,000m"
 1960213,Men's Greco-Roman 67kg
 1960221,Women's Freestyle 76kg
@@ -12255,9 +12413,9 @@ code,events
 1960549,50m Rifle 3 Positions Women
 1960557,Women's Dinghy
 1960567,Women's Freestyle 76kg
-1960571,Women's Shot Put
 1960581,Women's 400m Hurdles
 1960588,Women's 200m
+1960590,Men's 4 x 400m Relay
 1960590,4 x 400m Relay Mixed
 1960604,Men's 400m
 1960604,Men's 4 x 400m Relay
@@ -12265,18 +12423,17 @@ code,events
 1960612,Women's Marathon
 1960622,Women's 5000m
 1960646,Men's Discus Throw
-1960650,Women's 400m
 1960650,Women's 4 x 400m Relay
+1960650,4 x 400m Relay Mixed
 1960658,Men's 5000m
 1960659,Men's 100m
 1960659,Men's 200m
 1960659,Men's 4 x 100m Relay
 1960664,Men's Long Jump
 1960667,Men's 4 x 400m Relay
-1960671,Women's Heptathlon
 1960675,Women's 800m
-1960681,Women's Long Jump
 1960684,Men's 400m Hurdles
+1960684,Men's 4 x 400m Relay
 1960688,Men's Shot Put
 1960705,Women's Heptathlon
 1960709,Women's 4 x 100m Relay
@@ -12320,13 +12477,11 @@ code,events
 1960930,Women's Heptathlon
 1960933,Men's 1500m
 1960940,Men's Hammer Throw
-1960956,Men's 3000m Steeplechase
 1960958,Men's 100m
 1960958,Men's 4 x 100m Relay
 1960959,"Men's 10,000m"
 1960959,Men's 5000m
 1960961,Men's 110m Hurdles
-1960962,Women's 3000m Steeplechase
 1960971,Women's 4 x 400m Relay
 1960977,Men's High Jump
 1960984,Women's 400m
@@ -12335,8 +12490,6 @@ code,events
 1961011,Women's 100m
 1961011,Women's 4 x 100m Relay
 1961016,Women's 4 x 400m Relay
-1961020,Men's Discus Throw
-1961033,Women's 1500m
 1961035,Women's Triple Jump
 1961039,Men's Kite
 1961043,Men's Dinghy
@@ -12403,7 +12556,9 @@ code,events
 1961345,25m Pistol Women
 1961346,10m Air Pistol Women
 1961347,Skeet Women
+1961347,Skeet Mixed Team
 1961348,Skeet Men
+1961348,Skeet Mixed Team
 1961349,Skeet Men
 1961352,Men's Singles
 1961362,Women's Doubles
@@ -12447,6 +12602,7 @@ code,events
 1961735,Men's Dinghy
 1961744,Women's Dinghy
 1961747,Skeet Men
+1961747,Skeet Mixed Team
 1961760,Men's 92kg
 1961764,Men's Kayak Single 1000m
 1961877,Men's Road Race
@@ -12527,11 +12683,14 @@ code,events
 1963632,Men's 4 x 200m Freestyle Relay
 1963632,Relay Only Athlete
 1963633,Men's 100m Breaststroke
+1963633,Men's 4 x 100m Medley Relay
 1963633,Mixed 4 x 100m Medley Relay
 1963634,Women's 100m Butterfly
+1963634,Women's 4 x 100m Medley Relay
 1963634,Mixed 4 x 100m Medley Relay
 1963635,Men's 400m Individual Medley
 1963638,Men's 100m Backstroke
+1963638,Men's 4 x 100m Medley Relay
 1963638,Mixed 4 x 100m Medley Relay
 1963639,Women's 200m Individual Medley
 1963640,Men's 4 x 200m Freestyle Relay
@@ -12664,13 +12823,12 @@ code,events
 1965155,Women
 1965157,Women
 1965200,Men's 800m
+1965202,Men's 4 x 100m Relay
 1965202,Men's 4 x 400m Relay
 1965205,Men's Marathon
 1965211,Men's Pole Vault
-1965215,Men's 400m Hurdles
 1965220,Women's Hammer Throw
 1965223,Men's 110m Hurdles
-1965225,Men's Marathon
 1965226,Men's 200m
 1965233,Women's Hammer Throw
 1965234,Women's Marathon
@@ -12691,9 +12849,8 @@ code,events
 1965303,Men's Triple Jump
 1965304,Men's Discus Throw
 1965306,Men's High Jump
-1965307,Men's 5000m
 1965308,Women's 400m Hurdles
-1965310,Women's Pole Vault
+1965308,Women's 4 x 400m Relay
 1965326,Women's 5000m
 1965327,Men's 1500m
 1965366,Women's 200m Freestyle
@@ -12712,7 +12869,6 @@ code,events
 1965405,Jumping Team
 1965411,Dressage Individual
 1965411,Dressage Team
-1965427,Jumping Team
 1965472,B-Girls
 1965473,B-Boys
 1965474,B-Boys
@@ -12778,6 +12934,8 @@ code,events
 1965855,Men's Triple Jump
 1965864,Women's Marathon
 1965868,Women's 200m
+1965868,Women's 4 x 100m Relay
+1965868,Women's 4 x 400m Relay
 1965871,Men's Decathlon
 1965875,Women's Shot Put
 1965887,Women's Discus Throw
@@ -12787,12 +12945,10 @@ code,events
 1965904,Men's 4 x 100m Relay
 1965917,Men's 3000m Steeplechase
 1965923,Women's Shot Put
-1965929,Women's Hammer Throw
 1965933,Men's Hammer Throw
 1965942,Women's 100m
 1965942,Women's 4 x 100m Relay
 1965947,Men's High Jump
-1965950,Men's Long Jump
 1965951,Men's Decathlon
 1965956,Men
 1965970,Men's 50m Freestyle
@@ -12838,17 +12994,20 @@ code,events
 1966652,Women's Madison
 1966652,Women's Team Pursuit
 1966653,Women's Road Race
+1966655,Men's Madison
 1966655,Men's Omnium
 1966655,Men's Team Pursuit
 1966661,Men's Team Pursuit
 1966665,Men's Road Race
 1966665,Men's Individual Time Trial
+1966666,Women's Madison
 1966666,Women's Team Pursuit
 1966671,Women's Team Pursuit
 1966673,Men's Cross-country
 1966676,Women's Cross-country
 1966677,Women's Team Sprint
 1966678,Men's Keirin
+1966678,Men's Sprint
 1966678,Men's Team Sprint
 1966681,Men's Park
 1966686,Women's Keirin
@@ -12860,6 +13019,7 @@ code,events
 1966690,Men's Madison
 1966690,Men's Team Pursuit
 1966691,Men's Madison
+1966691,Men's Omnium
 1966691,Men's Team Pursuit
 1966693,Women
 1966695,Men's Road Race
@@ -12869,9 +13029,13 @@ code,events
 1966699,Women's Road Race
 1966699,Women's Individual Time Trial
 1966702,Men's Team Sprint
+1966709,Women's Keirin
+1966709,Women's Sprint
 1966709,Women's Team Sprint
 1966711,Men's Team Pursuit
+1966712,Women's Omnium
 1966712,Women's Team Pursuit
+1966717,Men's Keirin
 1966717,Men's Sprint
 1966717,Men's Team Sprint
 1966719,Women's Keirin
@@ -12925,43 +13089,57 @@ code,events
 1966952,Men's Doubles
 1966952,Mixed Doubles
 1966987,Men's 10km
+1967053,Men
 1967057,Women's 100m Butterfly
 1967057,Women's 100m Freestyle
 1967057,Women's 4 x 100m Freestyle Relay
+1967057,Women's 4 x 100m Medley Relay
 1967057,Mixed 4 x 100m Medley Relay
 1967058,Men's 100m Butterfly
 1967058,Men's 200m Butterfly
+1967058,Men's 4 x 100m Medley Relay
 1967062,Women's 4 x 200m Freestyle Relay
 1967062,Relay Only Athlete
 1967063,Men's 100m Backstroke
 1967063,Men's 4 x 100m Freestyle Relay
+1967063,Men's 4 x 100m Medley Relay
 1967065,Men's 200m Individual Medley
 1967065,Men's 4 x 100m Freestyle Relay
+1967065,Men's 4 x 100m Medley Relay
+1967065,Mixed 4 x 100m Medley Relay
 1967069,Men's 100m Butterfly
 1967069,Men's 100m Freestyle
 1967069,Men's 4 x 100m Freestyle Relay
+1967069,Men's 4 x 100m Medley Relay
 1967069,Men's 50m Freestyle
+1967069,Mixed 4 x 100m Medley Relay
 1967074,Women's 100m Breaststroke
+1967074,Women's 4 x 100m Medley Relay
 1967084,Women's 4 x 100m Freestyle Relay
 1967084,Women's 50m Freestyle
 1967084,Mixed 4 x 100m Medley Relay
 1967086,Women's 200m Breaststroke
 1967088,Women's 200m Freestyle
 1967088,Women's 4 x 100m Freestyle Relay
+1967088,Women's 4 x 100m Medley Relay
 1967088,Women's 4 x 200m Freestyle Relay
 1967092,Women's 4 x 200m Freestyle Relay
 1967092,Relay Only Athlete
 1967095,Women's 400m Individual Medley
 1967095,Women's 4 x 200m Freestyle Relay
 1967099,Women's 4 x 100m Freestyle Relay
+1967099,Women's 4 x 100m Medley Relay
 1967099,Relay Only Athlete
 1967104,Women's 100m Backstroke
 1967104,Women's 200m Backstroke
+1967104,Women's 4 x 100m Medley Relay
+1967104,Mixed 4 x 100m Medley Relay
 1967105,Women's 200m Breaststroke
 1967105,Women's 200m Individual Medley
 1967108,Women's 100m Butterfly
 1967110,Women's 10km
 1967119,Women's 100m Backstroke
+1967119,Women's 4 x 100m Medley Relay
 1967125,Men's 400m Individual Medley
 1967138,Men's 100m Freestyle
 1967138,Men's 4 x 100m Freestyle Relay
@@ -12970,6 +13148,7 @@ code,events
 1967140,Women's 400m Freestyle
 1967140,Women's 400m Individual Medley
 1967140,Women's 4 x 100m Freestyle Relay
+1967140,Women's 4 x 100m Medley Relay
 1967140,Women's 4 x 200m Freestyle Relay
 1967144,Men's 4 x 200m Freestyle Relay
 1967144,Relay Only Athlete
@@ -12979,6 +13158,7 @@ code,events
 1967153,Relay Only Athlete
 1967156,Men's 100m Backstroke
 1967156,Men's 200m Backstroke
+1967156,Men's 4 x 100m Medley Relay
 1967156,Mixed 4 x 100m Medley Relay
 1967157,Relay Only Athlete
 1967157,Mixed 4 x 100m Medley Relay
@@ -13029,6 +13209,7 @@ code,events
 1967410,Women
 1967431,Men's Single Sculls
 1967435,Skeet Women
+1967435,Skeet Mixed Team
 1967440,Trap Women
 1967442,10m Air Rifle Men
 1967442,50m Rifle 3 Positions Men
@@ -13038,6 +13219,7 @@ code,events
 1967446,50m Rifle 3 Positions Men
 1967447,Trap Men
 1967448,Skeet Men
+1967448,Skeet Mixed Team
 1967451,Trap Men
 1967454,Trap Women
 1967457,25m Rapid Fire Pistol Men
@@ -13061,6 +13243,7 @@ code,events
 1967599,Women
 1967602,Women
 1967606,Women
+1967607,Women
 1967608,Women
 1967612,Women
 1967616,Women
@@ -13109,6 +13292,7 @@ code,events
 1968090,Dressage Individual
 1968102,Eventing Individual
 1968102,Eventing Team
+1968108,Jumping Individual
 1968108,Jumping Team
 1968112,Eventing Individual
 1968112,Eventing Team
@@ -13178,7 +13362,6 @@ code,events
 1968967,Men
 1968994,Men
 1969115,Men
-1969121,Men's 100m
 1969153,Women's Road Race
 1969153,Women's Individual Time Trial
 1969159,Women's Road Race
@@ -13188,6 +13371,7 @@ code,events
 1969167,Women's Cross-country
 1969169,Women's Cross-country
 1969170,Women's Madison
+1969170,Women's Team Sprint
 1969173,Women's Madison
 1969173,Women's Omnium
 1969174,Women
@@ -13196,6 +13380,9 @@ code,events
 1969178,Women's Keirin
 1969178,Women's Sprint
 1969178,Women's Team Sprint
+1969179,Women's Keirin
+1969179,Women's Madison
+1969179,Women's Sprint
 1969179,Women's Team Sprint
 1969180,Women's Keirin
 1969180,Women's Sprint
@@ -13217,7 +13404,10 @@ code,events
 1969213,Men's Madison
 1969213,Men's Omnium
 1969216,Men's Madison
+1969216,Men's Omnium
 1969217,Men
+1969218,Men's Keirin
+1969218,Men's Sprint
 1969218,Men's Team Sprint
 1969239,Women's Sabre Individual
 1969239,Women's Sabre Team
@@ -13439,8 +13629,10 @@ code,events
 1971919,Women
 1971921,Men
 1971922,Men
+1971923,Women
 1971927,Women
 1971929,Men
+1971932,Men
 1971934,Men
 1971940,Women
 1971941,Men
@@ -13469,8 +13661,8 @@ code,events
 1972066,Men's 4 x 100m Relay
 1972075,Women's 4 x 100m Relay
 1972078,Women's 400m Hurdles
+1972078,Women's 4 x 400m Relay
 1972078,4 x 400m Relay Mixed
-1972079,Men's 400m
 1972084,Men's 4 x 100m Relay
 1972087,Men's Marathon
 1972088,Men's 800m
@@ -13481,12 +13673,12 @@ code,events
 1972099,"Women's 10,000m"
 1972102,Men's 5000m
 1972105,"Women's 10,000m"
-1972105,Women's 1500m
 1972105,Women's 5000m
 1972105,Women's Marathon
 1972110,Women's Long Jump
 1972111,Women's 4 x 100m Relay
 1972113,Women's 200m
+1972113,Women's 4 x 100m Relay
 1972115,Women's 400m
 1972115,Women's 4 x 400m Relay
 1972115,4 x 400m Relay Mixed
@@ -13523,6 +13715,8 @@ code,events
 1972234,4 x 400m Relay Mixed
 1972236,Women's Heptathlon
 1972240,Women's 400m Hurdles
+1972240,Women's 4 x 400m Relay
+1972240,4 x 400m Relay Mixed
 1972247,Men's Decathlon
 1972248,Women's 4 x 400m Relay
 1972249,Women's 4 x 100m Relay
@@ -13572,29 +13766,39 @@ code,events
 1972522,Women's 100m Freestyle
 1972522,Women's 200m Individual Medley
 1972522,Women's 4 x 100m Freestyle Relay
+1972522,Women's 4 x 100m Medley Relay
 1972522,Women's 4 x 200m Freestyle Relay
 1972522,Mixed 4 x 100m Medley Relay
 1972523,Women's 100m Backstroke
+1972523,Women's 4 x 100m Medley Relay
 1972524,Women's 50m Freestyle
 1972525,Women's 100m Breaststroke
 1972525,Women's 200m Breaststroke
+1972525,Women's 4 x 100m Medley Relay
 1972526,Women's 100m Backstroke
+1972526,Mixed 4 x 100m Medley Relay
 1972527,Women's 100m Butterfly
 1972527,Women's 4 x 100m Freestyle Relay
+1972527,Women's 4 x 100m Medley Relay
 1972527,Mixed 4 x 100m Medley Relay
 1972528,Women's 4 x 200m Freestyle Relay
 1972528,Relay Only Athlete
 1972542,Men's 100m Butterfly
+1972542,Men's 4 x 100m Medley Relay
+1972542,Mixed 4 x 100m Medley Relay
 1972543,Men's 100m Freestyle
 1972545,Men's 100m Breaststroke
 1972545,Men's 200m Breaststroke
+1972545,Men's 4 x 100m Medley Relay
 1972545,Mixed 4 x 100m Medley Relay
 1972546,Men's 100m Breaststroke
 1972546,Men's 200m Breaststroke
 1972549,Men's 50m Freestyle
 1972550,Men's 100m Backstroke
 1972550,Men's 200m Backstroke
+1972550,Men's 4 x 100m Medley Relay
 1972550,Mixed 4 x 100m Medley Relay
+1972551,Men's 4 x 100m Medley Relay
 1972551,Relay Only Athlete
 1972567,Men
 1972569,Men's 50m Freestyle
@@ -13816,6 +14020,7 @@ code,events
 1974261,Duet
 1974263,Team
 1974289,Men's 200m
+1974289,Men's 4 x 100m Relay
 1974290,Women's Hammer Throw
 1974302,Women's 400m
 1974302,Women's 4 x 400m Relay
@@ -13823,6 +14028,7 @@ code,events
 1974314,Women's 1500m
 1974316,Women's 4 x 400m Relay
 1974317,Women's 400m Hurdles
+1974317,Women's 4 x 400m Relay
 1974324,Men's 110m Hurdles
 1974335,Men's Decathlon
 1974349,Women's 3000m Steeplechase
@@ -13839,6 +14045,7 @@ code,events
 1974850,Jumping Team
 1974855,Eventing Individual
 1974855,Eventing Team
+1974858,Jumping Individual
 1974858,Jumping Team
 1974865,Dressage Individual
 1974865,Dressage Team
@@ -13891,7 +14098,6 @@ code,events
 1975455,Men
 1975465,Men
 1975792,Mixed Dinghy
-1975799,Men's Marathon
 1975800,Men -73 kg
 1975826,Men's 100m Butterfly
 1975829,Women's 100m Freestyle
@@ -13932,6 +14138,7 @@ code,events
 1976319,Women's Vault
 1976333,Women
 1976398,Men's Quadruple Sculls
+1976404,Mixed Relay
 1976411,Women's Javelin Throw
 1976416,Men's Marathon
 1976419,Women
@@ -13962,10 +14169,12 @@ code,events
 1976487,Men's Skiff
 1976489,Women's Individual
 1976490,Men's 200m Individual Medley
+1976490,Men's 4 x 100m Medley Relay
 1976490,Men's 4 x 200m Freestyle Relay
 1976491,4 x 400m Relay Mixed
 1976496,Men's 200m Freestyle
 1976496,Men's 400m Freestyle
+1976496,Men's 4 x 100m Medley Relay
 1976496,Men's 4 x 200m Freestyle Relay
 1976497,Men's Kayak Single
 1976497,Men's Kayak Cross
@@ -13983,6 +14192,8 @@ code,events
 1976530,Jumping Team
 1976534,4 x 400m Relay Mixed
 1976537,Women's 400m Hurdles
+1976537,Women's 4 x 400m Relay
+1976537,4 x 400m Relay Mixed
 1976538,Men's Individual Stroke Play
 1976540,Men
 1976540,Men's Floor Exercise
@@ -14100,6 +14311,7 @@ code,events
 1977707,Women's Kite
 1977709,50m Rifle 3 Positions Women
 1977715,Women's Madison
+1977717,Men's 4 x 100m Medley Relay
 1977717,Men's 4 x 200m Freestyle Relay
 1977717,Relay Only Athlete
 1977724,Women's Quadruple Sculls
@@ -14115,13 +14327,16 @@ code,events
 1977753,Eventing Team
 1977754,Men's 100m Backstroke
 1977754,Men's 200m Backstroke
+1977754,Men's 4 x 100m Medley Relay
 1977760,Women's Pole Vault
 1977765,Men's 200m
 1977770,Women -52 kg
+1977773,Women's 4 x 400m Relay
 1977773,4 x 400m Relay Mixed
 1977775,Women's 800m
 1977778,4 x 400m Relay Mixed
 1977781,Women's 200m
+1977781,Women's 4 x 100m Relay
 1977782,Men's 100m Butterfly
 1977782,Men's 200m Butterfly
 1977785,Men's 5000m
@@ -14137,6 +14352,7 @@ code,events
 1977842,Men's Four
 1977843,Lightweight Men's Double Sculls
 1977847,Women's Marathon
+1977850,Jumping Individual
 1977850,Jumping Team
 1977854,Men's Four
 1977856,Men's Cross-country
@@ -14154,6 +14370,7 @@ code,events
 1977859,Men's Team
 1977860,Women's Madison
 1977860,Women's Omnium
+1977861,Women's 4 x 400m Relay
 1977861,4 x 400m Relay Mixed
 1977863,Men
 1977863,Men's Floor Exercise
@@ -14166,6 +14383,7 @@ code,events
 1977865,Mixed Dinghy
 1977867,10m Air Pistol Men
 1977868,Men's 400m
+1977868,4 x 400m Relay Mixed
 1977870,Women's Singles
 1977871,Men
 1977873,Women's Pole Vault
@@ -14182,6 +14400,7 @@ code,events
 1977908,Men's Singles
 1977910,Women's 4 x 400m Relay
 1977911,Women's 800m
+1977912,Mixed Relay
 1977921,Women's Road Race
 1977926,Women's Heptathlon
 1977927,Men's Marathon
@@ -14203,7 +14422,6 @@ code,events
 1979019,Women's Road Race
 1979050,Men's Road Race
 1979050,Men's Individual Time Trial
-1979109,Men's Canoe Single 1000m
 1979109,Men's Canoe Double 500m
 1979110,Men's Canoe Single 1000m
 1979110,Men's Canoe Double 500m
@@ -14232,7 +14450,6 @@ code,events
 1979904,Women's 57kg
 1979929,Women's 75kg
 1980008,Women -57 kg
-1980023,Men's 110m Hurdles
 1980033,Women's 100m
 1980109,Men's 400m Hurdles
 1980115,Women's 10m Platform
@@ -14264,8 +14481,6 @@ code,events
 1980471,Men's 800m
 1980485,Men -90 kg
 1980513,Men's Marathon
-1980524,Women's Road Race
-1980524,Women's Cross-country
 1980555,Men's Marathon
 1980587,Men's 4 x 100m Relay
 1980700,Women
@@ -14325,7 +14540,6 @@ code,events
 1981059,Men's 4 x 100m Relay
 1981060,Men's 100m
 1981060,Men's 200m
-1981060,Men's 4 x 100m Relay
 1981061,Men's 200m
 1981066,Men's 400m
 1981066,Men's 4 x 400m Relay
@@ -14388,10 +14602,10 @@ code,events
 1981204,Women -78 kg
 1981206,Women's Boulder & Lead
 1981214,Men
-1981224,"Women's 10,000m"
 1981224,Women's 5000m
 1981295,Women's 400m
 1981295,Women's 4 x 400m Relay
+1981295,4 x 400m Relay Mixed
 1981375,Men's 57kg
 1981393,Men's 100m
 1981397,Women's 50m Freestyle
@@ -14427,6 +14641,7 @@ code,events
 1981548,Men
 1981549,Men's Kite
 1981553,Men
+1981556,Men
 1981558,Men
 1981564,Women's Road Race
 1981564,Women's Individual Time Trial
@@ -14456,6 +14671,7 @@ code,events
 1984746,Women's 5000m
 1986723,Men's 400m
 1986723,Men's 4 x 400m Relay
+1986723,4 x 400m Relay Mixed
 1996131,Men's 400m
 1998595,Men's 100m Backstroke
 2001756,Women's 200m Backstroke
@@ -14463,6 +14679,7 @@ code,events
 2009155,Men's 4 x 200m Freestyle Relay
 2009155,Relay Only Athlete
 2013977,Women's 100m Breaststroke
+2013977,Women's 4 x 100m Medley Relay
 2013979,Men's 400m Individual Medley
 2060840,Men's 102kg
 2280513,Men's 50m Freestyle
@@ -14507,9 +14724,7 @@ code,events
 3500057,Men
 3501795,Women's 4 x 100m Relay
 3501797,Men
-3501804,Women's 1500m
 3501806,Women's Heptathlon
-3508085,4 x 400m Relay Mixed
 3518182,Women's 100m Breaststroke
 3519160,Men's 20km Race Walk
 3520241,Men's Canoe Single
@@ -14569,7 +14784,6 @@ code,events
 4646625,Women's Foil Team
 4648370,"Men's 10,000m"
 4648450,Women's 5000m
-4654306,Men's 10km
 4654306,Men's 200m Freestyle
 4654306,Men's 400m Freestyle
 4654306,Men's 4 x 200m Freestyle Relay
@@ -14593,7 +14807,6 @@ code,events
 4669223,Men
 4670929,Women's 50m Freestyle
 4671406,Men's 800m
-4671772,Men's High Jump
 4671773,Women's 400m Hurdles
 4673099,4 x 400m Relay Mixed
 4674332,Men's 100m
@@ -14620,7 +14833,6 @@ code,events
 4849459,Women's 200m Individual Medley
 4849478,Women's 100m Hurdles
 4850481,Eventing Individual
-4851471,Women's Shot Put
 4851484,50m Rifle 3 Positions Men
 4966765,Women's Pole Vault
 4967517,Women's 4 x 100m Relay
@@ -14628,7 +14840,6 @@ code,events
 4968593,Men's 100m Breaststroke
 4968593,Men's 50m Freestyle
 4968750,Women's 4 x 400m Relay
-4968782,Women's 4 x 400m Relay
 4968786,Women's 1500m
 4968848,Women's 4 x 100m Relay
 4968898,Men
@@ -14655,7 +14866,6 @@ code,events
 4978819,Men's 100m
 4979108,"Men's 10,000m"
 4979112,Men's 4 x 100m Relay
-4979113,Men's Marathon
 4979196,Men's 400m Hurdles
 4979553,Women's High Jump
 4979554,"Men's 10,000m"
@@ -14664,10 +14874,9 @@ code,events
 4979556,Women's 400m Hurdles
 4979557,4 x 400m Relay Mixed
 4979558,"Women's 10,000m"
-4979559,Men's 800m
 4979560,Men's 3000m Steeplechase
-4979562,Men's Pole Vault
 4979563,Men's Long Jump
+4979564,Men's 4 x 400m Relay
 4979564,4 x 400m Relay Mixed
 4979565,Women's Pole Vault
 4979566,Women's 100m Hurdles
@@ -14678,3 +14887,4 @@ code,events
 4982762,Women +78 kg
 4983537,"Women's 10,000m"
 4986655,Women's 100m
+9460001,Women's Freestyle 50kg

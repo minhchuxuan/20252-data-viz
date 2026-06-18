@@ -540,8 +540,8 @@ with tab4:
 # ---------------------------------------------------------------------------
 st.divider()
 st.markdown(
-    '<p class="fine">Sources: public Paris 2024 CSVs (GitHub <code>paris2024-data</code>) and the '
-    'data.gouv.fr enriched athlete table (ODbL), both findable via Google Dataset Search. '
+    '<p class="fine">Sources: official Paris 2024 CSVs (Kaggle &ldquo;Paris 2024 Olympic Summer Games&rdquo;) '
+    'and the data.gouv.fr enriched athlete table (ODbL), both findable via Google Dataset Search. '
     'Built with Streamlit + Plotly &middot; colourblind-safe Okabe–Ito palette &middot; no sidebar, '
     'no tables — interact with the charts directly.</p>',
     unsafe_allow_html=True,

@@ -71,9 +71,9 @@ Loaders parse every quirk correctly and all documented counts reconcile:
 | Quantity | Documented | Verified |
 | --- | --- | --- |
 | NOCs (`country_stats`) | 206 | 206 |
-| Medaling NOCs | — | 91 |
-| Athletes | 11,183 | 11,183 |
-| Athlete–medal records | 2,271 | 2,271 |
+| Medaling NOCs | — | 92 |
+| Athletes | 11,113 | 11,113 |
+| Athlete–medal records | 2,268 | 2,268 |
 | Enriched athletes | 11,110 | 11,110 |
 | Normalized disciplines | 45 | 45 |
 

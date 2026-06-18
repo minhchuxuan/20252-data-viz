@@ -31,8 +31,8 @@ def load_data(data_dir: str | Path = DATA_DIR) -> dict[str, pd.DataFrame]:
     """Load all dashboard CSV files.
 
     The enriched athlete table comes from data.gouv.fr and uses semicolon
-    delimiters. Other tables are comma-delimited CSV files from the public
-    paris2024-data repository.
+    delimiters. The other tables are built from the official Kaggle "Paris 2024
+    Olympic Summer Games" dataset by ``scripts/build_data_from_kaggle.py``.
     """
     data_path = Path(data_dir)
     return {

@@ -131,8 +131,7 @@
 {\sffamily\bfseries\color{charcoal}\large HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY}\\[3pt]
 {\sffamily\color{slate} School of Information and Communications Technology}\\[16pt]
 {\color{gold}\rule{\linewidth}{2pt}}\\[6pt]
-{\sffamily\color{slate}\large IT5425 -- Data Management \& Visualization}\\[4pt]
-{\sffamily\color{slate}\normalsize \emph{Quan tri du lieu va truc quan hoa}}\\[10pt]
+{\sffamily\color{slate}\large IT5425 -- Data Management \& Visualization}\\[10pt]
 {\color{gold}\rule{\linewidth}{2pt}}\\[1.7cm]
 
 {\sffamily\bfseries\color{charcoal}\fontsize{30}{34}\selectfont
@@ -140,23 +139,23 @@ Paris 2024 Olympic\\[6pt] Data Story}\\[10pt]
 {\sffamily\Large\color{teal} A Streamlit dashboard and its visualization techniques}\\[6pt]
 {\sffamily\large\color{slate} Capstone report: visualization techniques and design rationale}\\[14pt]
 {\sffamily\color{charcoal}\normalsize\textbf{Group members}}\\[4pt]
-{\sffamily\color{slate}\itshape Full names and 8-digit student IDs}\\[8pt]
+{\sffamily\color{slate}\small
+Chu Xuan Minh\,(20235527) \quad Nguyen Binh Anh\,(20235470) \quad Vu Thuy Linh\,(20235521)\\[3pt]
+Nguyen Thanh Vinh\,(20235576) \quad Nguyen Dinh Truong\,(20235566)}\\[8pt]
 {\sffamily\color{slate}\textbf{Supervisor:} Tran Viet Trung}\\[1.8cm]
 
 % KPI strip on the cover
 \begin{tabularx}{\linewidth}{XXXXX}
-\begin{kpicard}{11{,}183}{Athletes} \end{kpicard} &
+\begin{kpicard}{11{,}113}{Athletes} \end{kpicard} &
 \begin{kpicard}{206}{NOCs} \end{kpicard} &
 \begin{kpicard}{45}{Disciplines} \end{kpicard} &
-\begin{kpicard}{2{,}271}{Medal records} \end{kpicard} &
+\begin{kpicard}{2{,}268}{Medal records} \end{kpicard} &
 \begin{kpicard}{41}{Venues mapped} \end{kpicard} \\
 \end{tabularx}
 \vspace{1.6cm}
 
-{\sffamily\large\color{charcoal}\textbf{Tool:} Streamlit + Plotly \qquad \textbf{Dataset:} Paris 2024 public CSVs}\\[6pt]
-{\sffamily\color{slate} Sources: \href{https://github.com/taniki/paris2024-data}{paris2024-data} (GitHub) and \href{https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024}{data.gouv.fr} enriched athletes (ODbL)}\\[4pt]
+{\sffamily\large\color{charcoal}\textbf{Tool:} Streamlit + Plotly \qquad \textbf{Dataset:} Paris 2024 Olympic Games}\\[6pt]
 \vfill
-{\sffamily\color{slate}\small Dataset findable via Google Dataset Search}\\[6pt]
 {\sffamily\color{charcoal} Hanoi, June 2026}
 \end{titlepage}
 
@@ -193,11 +192,11 @@ live dashboard, so the document and the application are guaranteed to agree.
 \toprule
 \rowcolor{charcoal}\textbf{\color{white}Member} & \textbf{\color{white}Student ID} & \textbf{\color{white}Primary responsibilities} \\
 \midrule
-\emph{[ name 1 ]} & \emph{[ ID ]} & Data acquisition, cleaning, and validation. \\
-\emph{[ name 2 ]} & \emph{[ ID ]} & Chart design and figure preparation. \\
-\emph{[ name 3 ]} & \emph{[ ID ]} & Dashboard layout and interaction design. \\
-\emph{[ name 4 ]} & \emph{[ ID ]} & Report --- technique analysis and design rationale. \\
-\emph{[ name 5 ]} & \emph{[ ID ]} & Presentation and overall quality assurance. \\
+Chu Xuan Minh       & 20235527 & Data acquisition, cleaning, and validation. \\
+Nguyen Binh Anh     & 20235470 & Chart design and figure preparation. \\
+Vu Thuy Linh        & 20235521 & Dashboard layout and interaction design. \\
+Nguyen Thanh Vinh   & 20235576 & Report --- technique analysis and design rationale. \\
+Nguyen Dinh Truong  & 20235566 & Presentation and overall quality assurance. \\
 \bottomrule
 \end{tabularx}
 \caption{Division of work by primary responsibility.}
@@ -270,15 +269,17 @@ visualization. The explanatory-versus-exploratory distinction this rests on is a
 storytelling concept, taken up later in Section~\ref{sec:techniques}.
 
 \subsection{Data sources and tables}
-The project draws on two complementary, openly licensed sources, both findable
-through Google Dataset Search:
+The project draws on two complementary, openly licensed sources, both indexed by
+and findable on Google Dataset Search:
 
 \begin{itemize}
-  \item \textbf{paris2024-data} (GitHub, \emph{taniki})~\cite{paris2024data}:
-        official-derived medal and athlete tables.
-  \item \textbf{data.gouv.fr} ``Les athletes des JO de Paris 2024''
-        (ODbL)~\cite{datagouv}: an enriched athlete table with age, venue
-        coordinates, competition dates, medal counts, and a record flag.
+  \item \textbf{``Paris 2024 Olympic Summer Games''} (Kaggle)~\cite{kaggle2024}:
+        the official athlete, medallist, athlete--medal, and country medal-table
+        CSVs (the Tokyo comparison comes from the same official tables).
+  \item \textbf{``Les athletes des Jeux Olympiques de Paris 2024''} (data.gouv.fr,
+        R\'eseau Canop\'e, ODbL)~\cite{datagouv}: an enriched athlete table with age,
+        venue coordinates, competition dates, medal counts, and a record flag ---
+        part of the fully Dataset-Search-indexed data.gouv.fr catalogue.
 \end{itemize}
 
 \begin{table}[htbp]
@@ -289,17 +290,18 @@ through Google Dataset Search:
 \toprule
 \rowcolor{charcoal}\textbf{\color{white}File} & \textbf{\color{white}Rows} & \textbf{\color{white}Purpose} \\
 \midrule
-\texttt{athletes.csv}                  & 11{,}183 & Athlete bios: NOC, gender, birth date, height. \\
-\texttt{athletes\_disciplines.csv}     & 11{,}225 & Athlete $\rightarrow$ discipline membership. \\
-\texttt{athletes\_events.csv}          & 14{,}679 & Athlete $\rightarrow$ event membership. \\
-\texttt{medals.csv}                    &  2{,}271 & Athlete--medal records (NOC, athlete, discipline, colour). \\
-\texttt{medallists.csv}                &  2{,}015 & Athlete-level medal totals. \\
-\texttt{medal\_countries.csv}          &     91 & Paris 2024 country medal table. \\
+\texttt{athletes.csv}                  & 11{,}113 & Athlete bios: NOC, gender, birth date, height. \\
+\texttt{athletes\_disciplines.csv}     & 11{,}142 & Athlete $\rightarrow$ discipline membership. \\
+\texttt{athletes\_events.csv}          & 14{,}889 & Athlete $\rightarrow$ event membership. \\
+\texttt{medals.csv}                    &  2{,}268 & Athlete--medal records (NOC, athlete, discipline, colour). \\
+\texttt{medallists.csv}                &  2{,}013 & Athlete-level medal totals. \\
+\texttt{medal\_countries.csv}          &     92 & Paris 2024 country medal table. \\
 \texttt{medal\_countries\_tokyo.csv}   &     93 & Tokyo 2020 comparison medal table. \\
 \texttt{paris2024\_athletes\_enriched.csv} & 11{,}110 & Enriched athletes: age, venue coords, dates, records. \\
 \bottomrule
 \end{tabularx}
-\caption{The eight source CSVs. Row counts are verified at load time (header excluded).}
+\caption{The eight working CSVs (the first seven built from the official Kaggle
+dataset, the last from data.gouv.fr). Row counts are verified at load time (header excluded).}
 \label{tab:files}
 \end{table}
 
@@ -341,11 +343,11 @@ programmatically rather than by hand-editing the data.
 
 \subsection{Verified shape, types, and completeness}
 After preparation, all documented counts reconcile exactly: \textbf{206} national
-Olympic committees (of which \textbf{91} won at least one medal), \textbf{11{,}183}
-athletes in the official roster --- \textbf{11{,}110} of whom (99\,\%) also carry an
-\emph{enriched profile} (age, venue, dates, records) that powers the demographic and
-map views --- \textbf{2{,}271} athlete--medal records, and \textbf{45} normalized
-disciplines shared across views. The roster figure headlines the Opening Lens while
+Olympic committees (of which \textbf{92} won at least one medal), \textbf{11{,}113}
+athletes in the official roster; the demographic and map views draw on a closely
+matching \emph{enriched profile} table of \textbf{11{,}110} athletes (age, venue,
+dates, records) from data.gouv.fr --- \textbf{2{,}268} athlete--medal records, and
+\textbf{45} normalized disciplines shared across views. The roster figure headlines the Opening Lens while
 the athlete-demographic views report the slightly smaller enriched count, and the two
 are reconciled on screen. Data types are consistent throughout --- numeric medal, age,
 and coordinate fields, proper date fields, and boolean flags for record-holders and
@@ -973,9 +975,10 @@ and consistent with the application that produced them.
 \vspace{0.6cm}
 \noindent\rule{\linewidth}{0.4pt}\\[2pt]
 {\footnotesize\sffamily\color{slate}
-Data: Paris~2024 public CSVs (paris2024-data, GitHub) and the data.gouv.fr
-enriched athlete table (ODbL). Built with Streamlit and Plotly; figures are
-generated directly from the dashboard's own charting code.}
+Data: the official Paris~2024 CSVs (Kaggle ``Paris 2024 Olympic Summer Games'')
+and the data.gouv.fr enriched athlete table (ODbL), both findable on Google
+Dataset Search. Built with Streamlit and Plotly; figures are generated directly
+from the dashboard's own charting code.}
 
 % ===================== REFERENCES ===================================
 \addcontentsline{toc}{section}{References}
@@ -995,7 +998,7 @@ generated directly from the dashboard's own charting code.}
 \bibitem{okabeito2008} M.~Okabe and K.~Ito. Color universal design (CUD): how to make figures and presentations friendly to colourblind people. 2008.
 \bibitem{bach2017} B.~Bach, N.~Henry-Riche, S.~Carpendale, et al. Narrative design patterns for data-driven storytelling. In \emph{Data-Driven Storytelling}. CRC Press, 2017.
 \bibitem{bigbook2017} S.~Wexler, J.~Shaffer, and A.~Cotgreave. \emph{The Big Book of Dashboards}. Wiley, 2017.
-\bibitem{paris2024data} taniki. \emph{paris2024-data}. GitHub. \url{https://github.com/taniki/paris2024-data}.
+\bibitem{kaggle2024} P.~Ivaniuk. \emph{Paris 2024 Olympic Summer Games} (dataset). Kaggle. \url{https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games}.
 \bibitem{datagouv} data.gouv.fr. \emph{Les athletes des Jeux Olympiques de Paris 2024} (ODbL). \url{https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024}.
 \end{thebibliography}
 \endgroup

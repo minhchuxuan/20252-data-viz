@@ -70,9 +70,10 @@ The project follows `course_requirements/course_info.md` as the source of truth:
 
 ## Data Sources
 
-- Public Paris 2024 CSVs from https://github.com/taniki/paris2024-data
-- Enriched athlete table from https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024
-- Google Dataset Search query: https://datasetsearch.research.google.com/search?query=Paris%202024%20Olympic%20Summer%20Games
+- Official Paris 2024 CSVs — Kaggle "Paris 2024 Olympic Summer Games" (findable on Google Dataset Search): https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
+- Enriched athlete table — data.gouv.fr "Les athlètes des Jeux Olympiques de Paris 2024" (findable on Google Dataset Search): https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024
+- Google Dataset Search: https://datasetsearch.research.google.com (queries: "Paris 2024 Olympic Summer Games"; "Les athlètes des Jeux Olympiques de Paris 2024")
+- Dev mirror only (not a cited source, not GDS-indexed): https://github.com/taniki/paris2024-data
 
 See `dataset_info.md` for schema, row counts, quality notes, and refresh commands.
 

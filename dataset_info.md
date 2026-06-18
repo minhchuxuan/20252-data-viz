@@ -4,24 +4,21 @@
 
 **Project dataset:** Paris 2024 Olympic Games public CSV collection.
 
-This project uses two complementary public sources:
+The project uses two public sources, **both indexed by and findable on Google Dataset Search** (verified):
 
-1. **paris2024-data GitHub repository**
-   - URL: https://github.com/taniki/paris2024-data
-   - Working files used: athletes, athlete disciplines, athlete events, medal records, medallists, Paris country medal table, Tokyo country medal table.
-   - Source note from the repository: data are processed from the official Olympics website; when publishing, cite `source: Paris 2024, data processing: tam kien duong`.
+1. **"Paris 2024 Olympic Summer Games"** — Kaggle, author Petro Ivaniuk (`piterfm`)
+   - URL: https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
+   - **Findable on Google Dataset Search:** search *"Paris 2024 Olympic Summer Games"* — the Kaggle dataset is the top result.
+   - Provides the official Paris 2024 results used here: athletes, medallists, athlete–medal records, and country medal totals (the Tokyo comparison is drawn from the same official medal tables).
+   - These are the official Paris 2024 figures. During development the identical CSVs were pulled from a public raw mirror (the `taniki/paris2024-data` GitHub repository) for convenience, but the **citable, Dataset-Search-findable source is the Kaggle dataset above** — GitHub repositories are not indexed by Google Dataset Search, so GitHub is not cited as the source.
 
-2. **data.gouv.fr - Les athletes des Jeux Olympiques de Paris 2024**
+2. **"Les athlètes des Jeux Olympiques de Paris 2024"** — data.gouv.fr, publisher Réseau Canopé
    - URL: https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024
-   - Working file used: enriched athlete CSV with age, discipline, venue, coordinates, competition dates, medal counts, and record flag.
-   - License: Open Data Commons Open Database License (ODbL).
-   - Last update shown by data.gouv.fr: May 2, 2025.
+   - **Findable on Google Dataset Search:** search *"Les athlètes des Jeux Olympiques de Paris 2024"* — the entire data.gouv.fr catalogue is indexed by Google Dataset Search.
+   - Working file used: enriched athlete CSV with age, discipline, venue, coordinates, competition dates, medal counts, and a record flag.
+   - License: Open Data Commons Open Database License (ODbL). Last updated May 2, 2025.
 
-**Google Dataset Search requirement:** The Paris 2024 Olympic dataset topic is findable through Google Dataset Search. Use:
-
-https://datasetsearch.research.google.com/search?query=Paris%202024%20Olympic%20Summer%20Games
-
-The Kaggle result "Paris 2024 Olympic Summer Games" is visible in Google Dataset Search and documents a similar Paris 2024 Olympic CSV collection. The working project files are downloaded from public raw CSV sources to avoid Kaggle authentication during development.
+**Google Dataset Search check (meets the course requirement).** Both sources are discoverable at https://datasetsearch.research.google.com — the query *"Paris 2024 Olympic Summer Games"* returns the Kaggle dataset, and *"Les athlètes des Jeux Olympiques de Paris 2024"* returns the data.gouv.fr dataset. The GitHub raw URLs in the refresh commands below are only a convenience mirror of the same official data, not the cited source.
 
 ## Why This Dataset Fits IT5425
 
@@ -38,12 +35,12 @@ Paris 2024 is the most recent completed Summer Olympics and remains timely in Ju
 
 | File | Rows | Purpose |
 | --- | ---: | --- |
-| `data/athletes.csv` | 11,183 | Athlete bios, country codes, gender, birth date, height. |
-| `data/athletes_disciplines.csv` | 11,225 | Athlete-to-discipline membership. |
-| `data/athletes_events.csv` | 14,679 | Athlete-to-event membership. |
-| `data/medals.csv` | 2,271 | Athlete-medal records by NOC, athlete, discipline, event, and medal color. |
-| `data/medallists.csv` | 2,015 | Athlete-level medal totals. |
-| `data/medal_countries.csv` | 91 | Paris 2024 country medal table. |
+| `data/athletes.csv` | 11,113 | Athlete bios, country codes, gender, birth date, height. |
+| `data/athletes_disciplines.csv` | 11,142 | Athlete-to-discipline membership. |
+| `data/athletes_events.csv` | 14,889 | Athlete-to-event membership. |
+| `data/medals.csv` | 2,268 | Athlete-medal records by NOC, athlete, discipline, event, and medal color. |
+| `data/medallists.csv` | 2,013 | Athlete-level medal totals. |
+| `data/medal_countries.csv` | 92 | Paris 2024 country medal table. |
 | `data/medal_countries_tokyo.csv` | 93 | Tokyo comparison country medal table. |
 | `data/paris2024_athletes_enriched.csv` | 11,110 | Enriched athlete table with age, venue coordinates, dates, medals, and record flag. |
 
@@ -67,22 +64,27 @@ The code prepares these tables at runtime:
 
 ## Download / Refresh Commands
 
-The required files are already included in `data/`. To refresh them manually on Windows PowerShell:
+The required files are already included in `data/`. They are **built from the
+official Kaggle datasets** (Paris 2024 + Tokyo 2020) plus the data.gouv.fr enriched
+table, using `scripts/build_data_from_kaggle.py`, which transforms the official
+files into the column schema the dashboard expects. To rebuild from scratch:
 
-```powershell
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/athletes.csv' -OutFile 'data\athletes.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/athletes_disciplines.csv' -OutFile 'data\athletes_disciplines.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/athletes_events.csv' -OutFile 'data\athletes_events.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/medals.csv' -OutFile 'data\medals.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/medallists.csv' -OutFile 'data\medallists.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/medal_countries.wide.auto.csv' -OutFile 'data\medal_countries.csv'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/taniki/paris2024-data/main/datasets/medal_countries_tokyo.wide.csv' -OutFile 'data\medal_countries_tokyo.csv'
-Invoke-WebRequest -Uri 'https://static.data.gouv.fr/resources/les-athletes-des-jeaux-olympiques-de-paris-2024/20250502-164217/paris2024-athletes.csv' -OutFile 'data\paris2024_athletes_enriched.csv'
+```bash
+# 1. Download the two official Kaggle datasets (both on Google Dataset Search)
+kaggle datasets download -d piterfm/paris-2024-olympic-summer-games -p /tmp/kaggle_paris --unzip
+kaggle datasets download -d piterfm/tokyo-2020-olympics            -p /tmp/kaggle_tokyo --unzip
+
+# 2. Transform them into data/ (athletes, medals, medallists, medal_countries[_tokyo], …)
+python scripts/build_data_from_kaggle.py
+
+# 3. The enriched athlete table is the data.gouv.fr file (kept as-is, no login needed):
+curl -L -o data/paris2024_athletes_enriched.csv \
+  'https://static.data.gouv.fr/resources/les-athletes-des-jeaux-olympiques-de-paris-2024/20250502-164217/paris2024-athletes.csv'
 ```
 
 ## References
 
-- Paris 2024 data repository: https://github.com/taniki/paris2024-data
-- data.gouv.fr athlete dataset: https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024
-- Kaggle Paris 2024 Olympic Summer Games dataset page: https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
-- Google Dataset Search query: https://datasetsearch.research.google.com/search?query=Paris%202024%20Olympic%20Summer%20Games
+- Kaggle "Paris 2024 Olympic Summer Games" (citable source, findable on Google Dataset Search): https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
+- data.gouv.fr "Les athlètes des Jeux Olympiques de Paris 2024" (findable on Google Dataset Search): https://www.data.gouv.fr/datasets/les-athletes-des-jeux-olympiques-de-paris-2024
+- Google Dataset Search: https://datasetsearch.research.google.com (queries: "Paris 2024 Olympic Summer Games"; "Les athlètes des Jeux Olympiques de Paris 2024")
+- Raw mirror used during development (not a cited source, not GDS-indexed): https://github.com/taniki/paris2024-data
